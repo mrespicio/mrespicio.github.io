@@ -2,6 +2,10 @@
     font-family: 'open-sans', 'arial';
 }
 
+body{
+    background-color: azure;
+}
+
 #navbar{
     display: flex;
     justify-content: space-around;
@@ -13,8 +17,12 @@ ul li{
 
 #hero{
     background-color: lightgoldenrodyellow;
-    height: 100vh;
+    height: 800px;
+}
+
+#hero-container{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -24,4 +32,18 @@ ul li{
 
 #hero-right{
 
+}
+
+#about{
+    background-color: lightpink;
+}
+
+
+
+#tech-stack{
+    background-color: lightblue;
+}
+
+#projects{
+    background-color: lightgreen;
 }
