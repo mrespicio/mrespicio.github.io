@@ -19,11 +19,14 @@ ul li{
     list-style: none;
 }
 
+/* all containers share this */
 .container{
     border: solid 1px green;
     width: 800px;
     max-width: 1020px;
 }
+
+
 
 #hero{
     background-color: lightgoldenrodyellow;
@@ -41,14 +44,12 @@ ul li{
 }
 
 #hero-right{
-
+    border: solid 1px red;
 }
 
 #about{
     background-color: lightpink;
 }
-
-
 
 #tech-stack{
     background-color: lightblue;
@@ -75,5 +76,5 @@ ul li{
 }
 
 .project-item>img{
-    width: 200px;
+    width: 400px;
 }
