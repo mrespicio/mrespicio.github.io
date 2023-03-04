@@ -81,3 +81,16 @@ ul li{
 .project-item>img{
     min-width: 200px;
 }
+
+
+#tech-stack-container{
+
+}
+
+.tech-item{
+    display: inline-block;
+    border: solid 1px blue;
+}
+#tech-stack img{
+    width: 30px;
+}
