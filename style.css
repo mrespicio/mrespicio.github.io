@@ -82,15 +82,25 @@ ul li{
     min-width: 200px;
 }
 
-
 #tech-stack-container{
 
 }
 
 .tech-item{
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 6px;
+    /*width: 200px;*/
     display: inline-block;
-    border: solid 1px blue;
+    transition: 0.2s ease-in-out;
+
 }
+/*
+.tech-item:hover{
+    cursor: pointer;
+    margin-bottom: 5px;
+}*/
+
 #tech-stack img{
     width: 30px;
 }
