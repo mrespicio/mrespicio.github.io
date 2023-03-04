@@ -4,6 +4,10 @@
 
 body{
     background-color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #navbar{
@@ -13,6 +17,12 @@ body{
 
 ul li{
     list-style: none;
+}
+
+.container{
+    border: solid 1px green;
+    width: 800px;
+    max-width: 1020px;
 }
 
 #hero{
@@ -49,17 +59,21 @@ ul li{
 }
 
 .projects-container{
-    display: flex;
-    flex-direction: row;
+    /*display: flex;
+    flex-direction: row */
+    padding: 0 50px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, minmax(min(22rem, 100%), 1fr));
 }
 
 .project-item{
     border: solid red 1px;
-    width: 300px;
-    height: 500px;
+    min-width: 200px;
+    /*width: 300px;
+    //height: auto;*/
 }
 
 .project-item>img{
     width: 200px;
-    height: 300px;
 }
