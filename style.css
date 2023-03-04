@@ -22,15 +22,14 @@ ul li{
 /* all containers share this */
 .container{
     border: solid 1px green;
-    width: 800px;
-    max-width: 1020px;
+    /*max-width: 1000px;*/
+    padding: 0 50px;
 }
-
-
 
 #hero{
     background-color: lightgoldenrodyellow;
-    height: 800px;
+    height: 100vh;
+    height: 100svh;
 }
 
 #hero-container{
@@ -61,14 +60,18 @@ ul li{
 
 .projects-container{
     /*display: flex;
-    flex-direction: row */
-    padding: 0 50px;
-    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    */
+    display: grid; 
     gap: 1rem;
-    grid-template-columns: repeat(2, minmax(min(22rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 2fr));
+    /*grid-template-columns: repeat(auto-fill, minmax(200px, 100%),2fr);*/
 }
 
 .project-item{
+    display: flex;
+    flex-direction: column;
     border: solid red 1px;
     min-width: 200px;
     /*width: 300px;
@@ -76,5 +79,5 @@ ul li{
 }
 
 .project-item>img{
-    width: 400px;
+    min-width: 200px;
 }
