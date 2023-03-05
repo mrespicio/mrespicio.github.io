@@ -28,7 +28,6 @@ body{
     left: 0;
 }
 
-
 #navbar .btn{
     background-color: var(--pink);
     border: solid 1px var(--red);
@@ -37,7 +36,7 @@ body{
     padding: 0 1rem;
 }
 
-.top-bar button{
+.header-bar button{
     background-color: var(--pink);
     border: solid 1px var(--red);
     padding: 0 .5rem;
@@ -48,6 +47,23 @@ body{
     transition: 0.2s;
 }
 
+.header-bar{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--pink);
+    border-bottom: solid 1px red;
+    height: 30px;
+    padding: 5px;
+}
+
+.bar-right{
+    display: flex;
+}
+
+.header-bar button{
+    font-size: 20px;
+    margin: 1px 5px;
+}
 
 ul li{
     list-style: none;
@@ -62,7 +78,7 @@ a{
 /* all section share this */
 .container{
     border: solid 1px red;
-    background-color: #FFDBE1;
+    background-color: white;
     /*border-radius: 6px;*/
     max-width: 1080px;
     /*min-width: 600px;*/
@@ -72,26 +88,13 @@ a{
     background-color: FFDBE1;
 }
 
-.top-bar{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: solid 1px red;
-    height: 30px;
-    padding: 5px;
-}
 
-.bar-right{
-    display: flex;
-}
 
 h2{
     margin: 0;
 }
 
-.top-bar button{
-    font-size: 20px;
-    margin: 1px 5px;
-}
+
 
 #hero{
     background-color: lightgoldenrodyellow;
@@ -161,13 +164,11 @@ h2{
 }
 
 .tech-item{
-    background-color: white;
+    background-color: var(--pink);
     padding: 10px;
-    border-radius: 6px;
     /*width: 200px;*/
     display: inline-block;
     transition: 0.2s ease-in-out;
-
 }
 /*
 .tech-item:hover{
