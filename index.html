@@ -32,7 +32,7 @@
                 <div class="header-bar">
                     <h2>About Me</h2>
                     <div class="bar-right">
-                        <button id="collapse" onclick="collapse('about-content')">_</button>
+                        <button class="collapse" onclick="collapseSection('about-content')">_</button>
                         <button>X</button>
                     </div>
                 </div> <!-- end top bar -->
@@ -50,14 +50,13 @@
                 <div class="header-bar">
                     <h2>Tech Stack</h2>
                     <div class="bar-right">
-                        <button id="collapse" onclick="collapse('tech-stack-container')">_</button>
+                        <button class="collapse" onclick="collapseSection('tech-stack-container')">_</button>
                         <button>X</button>
                     </div>
                 </div> <!-- end top bar -->
 
             <div id="tech-stack-container">
 
-                <h3>Front End</h3>
                 <div class="tech-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
                     HTML
@@ -71,7 +70,6 @@
                     JavaScript
                 </div>
 
-                <h3>Libraries and Frameworks</h3>
                 <div class="tech-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                     Node.JS
@@ -81,7 +79,6 @@
                     React.JS
                 </div>
           
-                <h3>Back End</h3>
                 <div class="tech-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
                     Java
@@ -93,7 +90,6 @@
                 </div>             
             
 
-                <h3>Design</h3>
                 <div class="tech-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" />
                     Canva
@@ -112,7 +108,6 @@
                 </div>
 
 
-                <h3>Tools</h3>
                 <div class="tech-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                     Git
@@ -127,7 +122,6 @@
                 </div>
 
 
-                <h3>Others</h3>
                 <div class="tech-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
                     Wordpress
@@ -203,9 +197,11 @@
     </main> 
 </body>
     <script>
-        function collapse(elem){
+        function collapseSection(elem){
+            console.log(elem);
             let temp = document.getElementById(elem);
-            if(temp.classList.contains('collapsed')) temp.classList.remove('collapsed');
+            if(temp.classList.contains('collapsed'))
+             temp.classList.remove('collapsed');
             else temp.classList.add('collapsed');
         }
     </script>

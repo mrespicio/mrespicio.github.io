@@ -44,7 +44,7 @@ body{
 
 .collapsed{
     display: none;
-    transition: 0.2s;
+    transition: 0.5s;
 }
 
 .header-bar{
@@ -89,11 +89,9 @@ a{
 }
 
 
-
 h2{
     margin: 0;
 }
-
 
 
 #hero{
@@ -160,14 +158,18 @@ h2{
 }
 
 #tech-stack-container{
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .tech-item{
     background-color: var(--pink);
+    border: solid 1px red;
     padding: 10px;
     /*width: 200px;*/
-    display: inline-block;
+    height: 50px;
+    width: 50px;
     transition: 0.2s ease-in-out;
 }
 /*
