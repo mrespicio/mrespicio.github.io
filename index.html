@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <script type="text/javascript" src="script.js"></script>      
+    <script type="text/javascript" src="script.js" defer></script>      
     <title>Megan Respicio</title>
 </head>
 <body>
@@ -29,28 +29,35 @@
         </section>
 
         <section id="about" class="container">
-            <div class="top-bar">
-                <h2>About Me</h2>
-                <div class="bar-right">
-                    <button class="collapse" onclick="
-                        collapse.classList.add('collapsed')
-                        ">_</button>
-                    <button>X</button>
-                </div>
-            </div>
-            <div class="about-container ">
+   
+                <!-- top bar -->
+                <div class="top-bar">
+                    <h2>About Me</h2>
+                    <div class="bar-right">
+                        <button id="collapse" onclick="collapse('about-content')">_</button>
+                        <button>X</button>
+                    </div>
+                </div> <!-- end top bar -->
+
+                <!-- collapsible content  -->
+            <div id="about-content" class="about-container">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illo omnis animi at, vitae itaque necessitatibus neque expedita nemo veniam, quae, architecto iure optio quod nihil obcaecati! Amet minima, dolorum excepturi quam voluptatum voluptatem eius alias unde illum repudiandae obcaecati sit molestias suscipit voluptate nesciunt inventore ad nemo velit doloribus!
                 </p>
-            </div>
+            </div> 
 
-        </section>
+        </section> 
 
         <section id="tech-stack" class="container">
-            <div class="top-bar">
-                <h2>My Tech Stack</h2>
-                <p>X</p>
-            </div>
-            <div class="tech-stack-container ">
+                <!-- top bar -->
+                <div class="top-bar">
+                    <h2>About Me</h2>
+                    <div class="bar-right">
+                        <button id="collapse" onclick="collapse('tech-stack-container')">_</button>
+                        <button>X</button>
+                    </div>
+                </div> <!-- end top bar -->
+
+            <div id="tech-stack-container">
 
                 <h3>Front End</h3>
                 <div class="tech-item">
@@ -189,7 +196,7 @@
 
         <nav>
             <ul id="navbar">
-                <li><button class="btn"><a href="#home">Home</a></button></li>
+                <li><button class="btn"><a href="#hero">Home</a></button></li>
                 <li><button class="btn"><a href="#about">About</a></button></li>
                 <li><button class="btn"><a href="#projects">Projects</a></button></li>
             </ul>
@@ -197,4 +204,11 @@
 
     </main> 
 </body>
+    <script>
+        function collapse(elem){
+            let temp = document.getElementById(elem);
+            if(temp.classList.contains('collapsed')) temp.classList.remove('collapsed');
+            else temp.classList.add('collapsed');
+        }
+    </script>
 </html>
