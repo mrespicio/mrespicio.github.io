@@ -27,11 +27,36 @@ a{
 
 /* all section share this */
 .container{
-    border: solid 1px green;
+    border: solid 1px red;
+    background-color: #FFDBE1;
+    /*border-radius: 6px;*/
     max-width: 1080px;
     /*min-width: 600px;*/
     /*padding-block: min(20vh, 10rem);*/
     margin: 0 min(80wh, 20rem);
+    margin-top: 40px;
+    background-color: FFDBE1;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px red;
+    height: 30px;
+    padding: 5px;
+}
+
+.bar-right{
+    display: flex;
+}
+
+h2{
+    margin: 0;
+}
+
+.top-bar button{
+    font-size: 20px;
+    margin: 1px 5px;
 }
 
 #hero{
@@ -56,11 +81,11 @@ a{
 }
 
 #about{
-    background-color: lightpink;
+
 }
 
 #tech-stack{
-    background-color: lightblue;
+
 }
 
 #projects{
@@ -102,7 +127,7 @@ a{
 }
 
 .tech-item{
-    background-color: lightgrey;
+    background-color: white;
     padding: 10px;
     border-radius: 6px;
     /*width: 200px;*/
