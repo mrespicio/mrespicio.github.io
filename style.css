@@ -3,6 +3,7 @@
     margin: 0;
     --red: #D22020;
     --pink: #FFDBE1;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -27,12 +28,27 @@ body{
     left: 0;
 }
 
+
 #navbar .btn{
     background-color: var(--pink);
     border: solid 1px var(--red);
     height: 30px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 1rem;
+}
+
+.top-bar button{
+    background-color: var(--pink);
+    border: solid 1px var(--red);
+    padding: 0 .5rem;
+}
+
+.top-bar .collapse {
+    
+}
+
+.collapsed{
+    display: none;
 }
 
 ul li{

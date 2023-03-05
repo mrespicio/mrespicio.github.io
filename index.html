@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-          
+    <script type="text/javascript" src="script.js"></script>      
     <title>Megan Respicio</title>
 </head>
 <body>
@@ -32,7 +32,9 @@
             <div class="top-bar">
                 <h2>About Me</h2>
                 <div class="bar-right">
-                    <button class="collapse">_</button>
+                    <button class="collapse" onclick="
+                        collapse.classList.add('collapsed')
+                        ">_</button>
                     <button>X</button>
                 </div>
             </div>
@@ -187,9 +189,9 @@
 
         <nav>
             <ul id="navbar">
-                <li><button class="btn">Home</button></li>
-                <li><button class="btn">Projects</button></li>
-                <li><button class="btn">About</button></li>
+                <li><button class="btn"><a href="#home">Home</a></button></li>
+                <li><button class="btn"><a href="#about">About</a></button></li>
+                <li><button class="btn"><a href="#projects">Projects</a></button></li>
             </ul>
         </nav>
 
