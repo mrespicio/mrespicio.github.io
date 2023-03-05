@@ -1,8 +1,12 @@
 *{
     font-family: 'open-sans', 'arial';
+    margin: 0;
+    --red: #D22020;
+    --pink: #FFDBE1;
 }
 
 body{
+    position: relative;
     background-color: azure;
     display: flex;
     flex-direction: column;
@@ -12,7 +16,23 @@ body{
 
 #navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    gap: 3px;
+    bottom: 0;
+    background-color: var(--pink);
+    width: 100vw;
+    height: 40px;
+    left: 0;
+}
+
+#navbar .btn{
+    background-color: var(--pink);
+    border: solid 1px var(--red);
+    height: 30px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 ul li{
