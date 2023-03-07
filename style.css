@@ -7,12 +7,15 @@
 }
 
 body{
-    position: relative;
-    background-color: azure;
+    background-color: var(--pink);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-size: 40px 40px;
+    background-image: 
+        linear-gradient(to right, white 1px, transparent 1px),
+        linear-gradient(to bottom, white 1px, transparent 1px); 
 }
 
 #navbar{
@@ -44,13 +47,13 @@ body{
 
 .collapsed{
     display: none;
-    transition: 0.5s;
 }
 
 .header-bar{
     display: flex;
     justify-content: space-between;
-    background-color: var(--pink);
+    background: rgb(210,32,32);
+    background: linear-gradient(36deg, rgba(210,32,32,1) 2%, rgba(255,250,251,1) 100%);
     border-bottom: solid 1px red;
     height: 30px;
     padding: 5px;
@@ -79,20 +82,10 @@ a{
 .container{
     border: solid 1px red;
     background-color: white;
-    /*border-radius: 6px;*/
     max-width: 1080px;
-    /*min-width: 600px;*/
-    /*padding-block: min(20vh, 10rem);*/
     margin: 0 min(80wh, 20rem);
     margin-top: 40px;
-    background-color: FFDBE1;
 }
-
-
-h2{
-    margin: 0;
-}
-
 
 #hero{
     background-color: lightgoldenrodyellow;
@@ -123,19 +116,48 @@ h2{
 
 }
 
+
+
+
+#tech-stack-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto;
+}
+
+.tech-item{
+    background-color: white;
+    padding: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.tech-item p{
+    text-align: center;
+}
+
+#tech-stack img{
+    width: 2.5rem;
+}
+
+.selected{
+    background-color: var(--pink);
+    outline: solid var(--red) 1px;
+}
+
+.tech-item:hover{
+    background-color: var(--pink);
+}
+
 #projects{
     background-color: lightgreen;
 }
 
 .projects-container{
-    /*display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    */
     display: grid; 
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 2fr));
-    /*grid-template-columns: repeat(auto-fill, minmax(200px, 100%),2fr);*/
 }
 
 .project-item{
@@ -155,29 +177,4 @@ h2{
     background-color: lightcoral;
     border-radius: 5px;
     padding: 1rem;
-}
-
-#tech-stack-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.tech-item{
-    background-color: var(--pink);
-    border: solid 1px red;
-    padding: 10px;
-    /*width: 200px;*/
-    height: 50px;
-    width: 50px;
-    transition: 0.2s ease-in-out;
-}
-/*
-.tech-item:hover{
-    cursor: pointer;
-    margin-bottom: 5px;
-}*/
-
-#tech-stack img{
-    width: 30px;
 }

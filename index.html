@@ -27,7 +27,6 @@
         </section>
 
         <section id="about" class="container">
-   
                 <!-- top bar -->
                 <div class="header-bar">
                     <h2>About Me</h2>
@@ -42,7 +41,6 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illo omnis animi at, vitae itaque necessitatibus neque expedita nemo veniam, quae, architecto iure optio quod nihil obcaecati! Amet minima, dolorum excepturi quam voluptatum voluptatem eius alias unde illum repudiandae obcaecati sit molestias suscipit voluptate nesciunt inventore ad nemo velit doloribus!
                 </p>
             </div> 
-
         </section> 
 
         <section id="tech-stack" class="container">
@@ -50,89 +48,89 @@
                 <div class="header-bar">
                     <h2>Tech Stack</h2>
                     <div class="bar-right">
-                        <button class="collapse" onclick="collapseSection('tech-stack-container')">_</button>
+                        <button class="collapse" onclick="collapseSection('tech-container')">_</button>
                         <button>X</button>
                     </div>
                 </div> <!-- end top bar -->
 
-            <div id="tech-stack-container">
+            <div id="tech-container">
+                <div id="tech-stack-grid">
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                        <p>HTML</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                        <p>CSS</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+                        <p>JavaScript</p>
+                    </div>
 
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                    HTML
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                    CSS
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-                    JavaScript
-                </div>
-
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                    Node.JS
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                    React.JS
-                </div>
-          
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-                    Java
-                </div>
-
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                    Python
-                </div>             
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                        <p>Node.JS</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                        <p>React.JS</p>
+                    </div>
             
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                        <p>Java</p>
+                    </div>
 
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" />
-                    Canva
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-                    Figma
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
-                    Adobe Photoshop
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" />
-                    Adobe XD
-                </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                        <p>Python</p>
+                    </div>             
+                
 
-
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                    Git
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                    Github
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                    VS Code
-                </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" />
+                        <p>Canva</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                        <p>Figma</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
+                        <p>Adobe Photoshop</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" />
+                        <p>Adobe XD</p>
+                    </div>
 
 
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
-                    Wordpress
-                </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                        <p>Git</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                        <p>Github</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                        <p>Visual Studio Code</p>
+                    </div>
 
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" />
-                    Ubuntu
+
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
+                        <p>WordPress</p>
+                    </div>
+
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" />
+                        <p>Ubuntu</p>
+                    </div>
                 </div>
             </div>
-
         </section>
 
         <section id="projects" class="container">
@@ -198,11 +196,14 @@
 </body>
     <script>
         function collapseSection(elem){
-            console.log(elem);
             let temp = document.getElementById(elem);
-            if(temp.classList.contains('collapsed'))
-             temp.classList.remove('collapsed');
+            if(temp.classList.contains('collapsed')) temp.classList.remove('collapsed');
             else temp.classList.add('collapsed');
+        }
+
+        function selectItem(item){
+            if(item.classList.contains('selected')) item.classList.remove('selected');
+            else item.classList.add('selected');
         }
     </script>
 </html>
