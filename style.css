@@ -12,6 +12,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     background-size: 40px 40px;
     background-image: 
         linear-gradient(to right, white 1px, transparent 1px),
@@ -170,10 +171,11 @@ a{
 
 .project-item>img{
     min-width: 200px;
+    width: 300px;
 }
 
-.project-item>button{
+.project-item>.project-buttons>button{
     background-color: lightcoral;
-    border-radius: 5px;
     padding: 1rem;
+    border: solid #D22020 1px;
 }
