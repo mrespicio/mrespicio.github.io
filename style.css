@@ -201,10 +201,15 @@ a{
     padding: 1rem;
     border: solid var(--red) 1px;
     color: var(--red);
+    border-radius: .5rem;
 }
 
 
 /* contact section */
 #contact{
     margin-bottom: 40px;
+}
+
+#contact-container>a>img{
+    width: 40px;
 }
