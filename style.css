@@ -102,6 +102,7 @@ a{
     margin: 2rem;
     border-radius: 1rem;
     padding: 1rem;
+    
 }
 
 /* hero section */
@@ -145,6 +146,7 @@ a{
 }
 
 .tech-item{
+    border: solid 1px red;
     background-color: white;
     padding: 1.5rem;
     width: 3rem;
@@ -170,11 +172,13 @@ a{
 
 
 /* projects section */
-#projects{
-
+.projects-container{
+    display: flex;
+    align-items: center;
 }
 
 .projects-grid{
+    margin: 0 auto;
     display: grid; 
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 2fr));
@@ -184,10 +188,11 @@ a{
     display: flex;
     flex-direction: column;
     min-width: 200px;
+    align-items: center;
 }
 
 .project-item>img{
-    min-width: 200px;
+    min-width: 100px;
     width: 300px;
 }
 
