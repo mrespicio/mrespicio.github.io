@@ -50,9 +50,11 @@ body{
     border: solid 2px red;
     background-color: var(--pink);
     max-width: 1280px;
+    min-width: 300px;
     margin: 0 min(80wh, 20rem);
     margin-top: 40px;
     border-radius: 1rem;
+
 }
 
 .collapsed{
@@ -113,20 +115,25 @@ a{
     height: 400px;
 }
 
-#hero-container{
+.hero-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 #hero-left{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #hero-right{
     border: solid 1px red;
 }
 
+#hero>.hero-container>#hero-left>h1{
+    font-size: 3em;
+}
 
 /*about section */
 #about-content{
@@ -193,9 +200,10 @@ a{
 
 .project-item>img{
     min-width: 100px;
-    width: 300px;
+    width: 22rem;
 }
 
+#hero>.hero-container>#hero-left>button,
 .project-item>.project-buttons>button{
     background-color: lightcoral;
     padding: 1rem;
