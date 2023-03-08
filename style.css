@@ -12,7 +12,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     background-size: 40px 40px;
     background-image: 
         linear-gradient(to right, white 1px, transparent 1px),
@@ -40,23 +39,20 @@ body{
     padding: 0 1rem;
 }
 
+/* all section share this */
 .header-bar button{
     background-color: var(--pink);
     border: solid 1px var(--red);
     padding: 0 .5rem;
 }
 
-#contact{
-    margin-bottom: 40px;
-}
-/* all section share this */
-.container{
+.section-container{
     border: solid 2px red;
-    background-color: white;
-    max-width: 1080px;
+    background-color: var(--pink);
+    max-width: 1280px;
     margin: 0 min(80wh, 20rem);
     margin-top: 40px;
-    bottom: 40px;
+    border-radius: 1rem;
 }
 
 .collapsed{
@@ -72,6 +68,8 @@ body{
     height: 30px;
     padding: 5px;
     color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 .bar-right{
@@ -92,6 +90,21 @@ a{
     color: black;
 }
 
+.container-menu>ul{
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    left: 0;
+}
+
+.content-container{
+    background-color: white;
+    margin: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/* hero section */
 #hero{
     background-color: lightgoldenrodyellow;
     /*height: 100vh;
@@ -113,16 +126,16 @@ a{
     border: solid 1px red;
 }
 
-#about{
+
+/*about section */
+#about-content{
 
 }
 
+/*tech stack section */
 #tech-stack{
 
 }
-
-
-
 
 #tech-stack-grid{
     display: flex;
@@ -138,12 +151,12 @@ a{
     height: 3rem;
 }
 
-.tech-item p{
-    text-align: center;
-}
-
 #tech-stack img{
     width: 2.5rem;
+}
+
+.tech-item p{
+    text-align: center;
 }
 
 .selected{
@@ -155,12 +168,13 @@ a{
     background-color: var(--pink);
 }
 
+
+/* projects section */
 #projects{
 
 }
 
 .projects-grid{
-    background-color: white;
     display: grid; 
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 2fr));
@@ -169,7 +183,6 @@ a{
 .project-item{
     display: flex;
     flex-direction: column;
-    border: solid red 1px;
     min-width: 200px;
 }
 
@@ -182,4 +195,10 @@ a{
     background-color: lightcoral;
     padding: 1rem;
     border: solid #D22020 1px;
+}
+
+
+/* contact section */
+#contact{
+    margin-bottom: 40px;
 }

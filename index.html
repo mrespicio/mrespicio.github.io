@@ -13,7 +13,7 @@
 
 
     <main>
-        <section id="hero" class="container">
+        <section id="hero" class="section-container">
             <div class="hero-container">
                 <section id="hero-left"><h1>Hi, I'm Megan</h1>
                 <h2>Front End Web Developer</h2>
@@ -26,7 +26,7 @@
             </div>
         </section>
 
-        <section id="about" class="container">
+        <section id="about" class="section-container">
                 <!-- top bar -->
                 <div class="header-bar">
                     <h2>About Me</h2>
@@ -37,13 +37,13 @@
                 </div> <!-- end top bar -->
 
                 <!-- collapsible content  -->
-            <div id="about-content" class="about-container">
+            <div id="about-content" class="content-container">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illo omnis animi at, vitae itaque necessitatibus neque expedita nemo veniam, quae, architecto iure optio quod nihil obcaecati! Amet minima, dolorum excepturi quam voluptatum voluptatem eius alias unde illum repudiandae obcaecati sit molestias suscipit voluptate nesciunt inventore ad nemo velit doloribus!
                 </p>
             </div> 
         </section> 
 
-        <section id="tech-stack" class="container">
+        <section id="tech-stack" class="section-container">
                 <!-- top bar -->
                 <div class="header-bar">
                     <h2>Tech Stack</h2>
@@ -53,7 +53,7 @@
                     </div>
                 </div> <!-- end top bar -->
 
-            <div id="tech-container">
+            <div id="tech-container" class="content-container">
                 <div id="tech-stack-grid">
                     <div class="tech-item" onclick="selectItem(this)">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
@@ -130,7 +130,7 @@
             </div>
         </section>
 
-        <section id="projects" class="container">
+        <section id="projects" class="section-container">
 
             <!-- top bar -->
             <div class="header-bar">
@@ -141,7 +141,7 @@
                 </div>
             </div> <!-- end top bar -->
 
-            <div id="projects-container">
+            <div id="projects-container" class="content-container">
                 <div class="projects-grid">
 
                     <div class="project-item">
@@ -198,9 +198,17 @@
             </div>
         </section>
 
-        <section id="contact" class="container">
-            <div class="contact-container">
-                here will be a contact thing
+        <section id="contact" class="section-container">
+            <!-- top bar -->
+            <div class="header-bar">
+                <h2>Contact</h2>
+                <div class="bar-right">
+                    <button class="collapse" onclick="collapseSection('contact-container')">_</button>
+                    <button>X</button>
+                </div>
+            </div> <!-- end top bar -->
+            <div class="contact-container" class="content-container">
+                <a href="mailto: megantr.dev@gmail.com">email me</a>
             </div>
         </section>
 
