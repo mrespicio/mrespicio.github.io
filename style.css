@@ -26,41 +26,22 @@ body{
     gap: 3px;
     bottom: 0;
     background-color: var(--pink);
+    border-top: solid 2px var(--red);
     width: 100vw;
     height: 40px;
     left: 0;
 }
 
-#navbar .btn{
+#navbar button{
     background-color: var(--pink);
     border: solid 1px var(--red);
+    color: var(--red);
     height: 30px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
 /* all section share this */
-.header-bar button{
-    background-color: var(--pink);
-    border: solid 1px var(--red);
-    padding: 0 .5rem;
-}
-
-.section-container{
-    border: solid 2px red;
-    background-color: var(--pink);
-    max-width: 1280px;
-    min-width: 300px;
-    margin: 0 min(80wh, 20rem);
-    margin-top: 40px;
-    border-radius: 1rem;
-
-}
-
-.collapsed{
-    display: none;
-}
-
 .header-bar{
     display: flex;
     justify-content: space-between;
@@ -77,26 +58,22 @@ body{
 .bar-right{
     display: flex;
 }
-
 .header-bar button{
+    background-color: var(--pink);
+    border: solid 1px var(--red);
+    padding: 0 .5rem;
     font-size: 20px;
     margin: 1px 5px;
 }
 
-ul li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-.container-menu>ul{
-    display: flex;
-    gap: 2rem;
-    justify-content: flex-start;
-    left: 0;
+.section-container{
+    border: solid 2px red;
+    background-color: var(--pink);
+    max-width: 1280px;
+    min-width: 320px;
+    margin: 0 min(80wh, 20rem);
+    margin-top: 40px;
+    border-radius: 1rem;
 }
 
 .content-container{
@@ -104,21 +81,35 @@ a{
     margin: 2rem;
     border-radius: 1rem;
     padding: 1rem;
-    
+}
+
+.collapsed{
+    display: none;
+}
+
+
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--red);
 }
 
 /* hero section */
 #hero{
-    background-color: lightgoldenrodyellow;
+    background-color: var(--pink);
     /*height: 100vh;
     height: 100svh;*/
-    height: 400px;
 }
 
 .hero-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 #hero-left{
@@ -201,13 +192,15 @@ a{
 .project-item>img{
     min-width: 100px;
     width: 22rem;
+    margin-bottom: .5rem;
 }
 
 #hero>.hero-container>#hero-left>button,
 .project-item>.project-buttons>button{
-    background-color: lightcoral;
+    background-color: var(--pink);
     padding: 1rem;
-    border: solid #D22020 1px;
+    border: solid var(--red) 1px;
+    color: var(--red);
 }
 
 
