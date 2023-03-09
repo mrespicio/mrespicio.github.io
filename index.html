@@ -4,197 +4,245 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-          
+    <script type="text/javascript" src="script.js" defer></script>      
     <title>Megan Respicio</title>
 </head>
 <body>
-    <!--
-    <header>
-        <nav>
-            <ul id="navbar">
-                <li>Home</li>
-                <li>Projects</li>
-                <li>About</li>
-            </ul>
-        </nav>
-    </header>-->
+
+
     <main>
-        <section id="hero" class="container">
+        <section id="hero" class="section-container">
+            <div class="header-bar"><h2>welcome</h2></div> 
             <div class="hero-container">
-                <section id="hero-left"><h1>Hi, I'm Megan</h1>
-                <h2>Front End Web Developer</h2>
-                <p>I'm here for a good time</p>
-                <button>view projects</button>
+                <section id="hero-left" class="content-container">
+                    <h3>Hi, I'm</h3>
+                    <h1>Megan Respicio</h1>
+                    <hr style="border-top: 2px solid red">
+                    <h2>Front End Web Developer</h2>
+                    <p>I'm here for a good time</p>
+                    <button><a href="#projects">view projects</a></button>
                 </section>
                 <section id="hero-right">
-                    <p>a cool image here</p>
+                    <img style="width: 200px; height: auto" src="img/avatar.png" alt="">
                 </section>
             </div>
         </section>
 
-        <section id="about" class="container">
+        <section id="about" class="section-container">
+                <!-- top bar -->
+                <div class="header-bar">
+                    <h2>about</h2>
+                    <div class="bar-right">
+                        <button class="collapse" onclick="collapseSection('about-content')">_</button>
+                        <button>X</button>
+                    </div>
+                </div> <!-- end top bar -->
 
-                <h2>About Me</h2>
-
-            <div class="about-container ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi illo omnis animi at, vitae itaque necessitatibus neque expedita nemo veniam, quae, architecto iure optio quod nihil obcaecati! Amet minima, dolorum excepturi quam voluptatum voluptatem eius alias unde illum repudiandae obcaecati sit molestias suscipit voluptate nesciunt inventore ad nemo velit doloribus!
+                <!-- collapsible content  -->
+            <div id="about-content" class="content-container">
+                <p> Hey there! I'm Megan - a curious and creative individual who's always looking for an adventure.
+                    My fascination for web design began in the early days of MySpace and Tumblr where everyone decorated their profiles in HTML and CSS.
+                    I was intrigued by the idea of some pages on the internet being a space for self-expression. 
+                    <br><br>
+                    I've obtained a Bachelor's in Computer Science at San Diego State University. I've learned a multitude of concepts and built
+                    some challegning projects. But I wanted to learn more and explore the side of front-end web development. Thus, I began this journey of 
+                    becoming a front-end developer. I aim to learn skills and apply my knowledge to create beautiful designs and applications.
                 </p>
+            </div> 
+        </section> 
+
+        <section id="tech-stack" class="section-container">
+                <!-- top bar -->
+                <div class="header-bar">
+                    <h2>tech stack</h2>
+                    <div class="bar-right">
+                        <button class="collapse" onclick="collapseSection('tech-container')">_</button>
+                        <button>X</button>
+                    </div>
             </div>
+            <!-- end top bar -->
+            <!-- section content -->
+            <div id="tech-container" class="content-container">
+                <div id="tech-stack-grid">
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                        <p>HTML</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                        <p>CSS</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+                        <p>JavaScript</p>
+                    </div>
 
-        </section>
-
-        <section id="tech-stack" class="container">
-
-            <h2>My Tech Stack</h2>
-
-            <div class="tech-stack-container ">
-
-                <h3>Front End</h3>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                    HTML
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                    CSS
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-                    JavaScript
-                </div>
-
-                <h3>Libraries and Frameworks</h3>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                    Node.JS
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                    React.JS
-                </div>
-          
-                <h3>Back End</h3>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-                    Java
-                </div>
-
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                    Python
-                </div>             
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                        <p>Node.JS</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                        <p>React.JS</p>
+                    </div>
             
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                        <p>Java</p>
+                    </div>
 
-                <h3>Design</h3>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" />
-                    Canva
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-                    Figma
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
-                    Adobe Photoshop
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" />
-                    Adobe XD
-                </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                        <p>Python</p>
+                    </div>             
+                
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                        <p>Figma</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
+                        <p>Adobe Photoshop</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" />
+                        <p>Adobe XD</p>
+                    </div>
 
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                        <p>Git</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                        <p>Github</p>
+                    </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                        <p>VS Code</p>
+                    </div>
 
-                <h3>Tools</h3>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                    Git
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                    Github
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                    VS Code
-                </div>
+                    <div class="tech-item" onclick="selectItem(this)">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
+                        <p>WordPress</p>
+                    </div>
 
-
-                <h3>Others</h3>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
-                    Wordpress
-                </div>
-
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg" />
-                    Ubuntu
-                </div>
-            </div>
-
-        </section>
-
-        <section id="projects" class="container">
-            <h2>Projects</h2>
-            <div class="projects-container ">
-
-                <div class="project-item">
-                    <h3>Pokedex Collab</h3>
-                    <img src="img/project-thumbnail/pokedex.png" alt="">
-                    <button class="src-btn"><a href="https://github.com/mrespicio/pokedex">Source Code</a></button>
-                </div>
-
-                <div class="project-item">
-                    <h3>Calculator</h3>
-                    <img src="img/project-thumbnail/calculator.png" alt="">
-                    <button class="src-btn"><a href="https://github.com/mrespicio/calculator">Source Code</a></button>
-                    <button class="prev-btn"><a href="https://mrespicio.github.io/calculator/">Preview</a></button>
-                </div>
-
-                <div class="project-item">
-                    <h3>Etch-A-Sketch</h3>
-                    <img src="img/project-thumbnail/etch-a-sketch.png" alt="">
-                    <button class="src-btn"><a href="https://github.com/mrespicio/etch-a-sketch">Source Code</a></button>
-                    <button class="prev-btn"><a href="https://github.com/mrespicio/etch-a-sketch">Preview</a></button>
-                </div>
-                <div class="project-item">
-                    <h3>Rock, Paper, Scissors</h3>
-                    <img src="img/project-thumbnail/rps.png" alt="">
-                    <button class="src-btn"><a href="https://github.com/mrespicio/rock-paper-scissors">Source Code</a></button>
-                    <button class="prev-btn"><a href="https://github.com/mrespicio/rock-paper-scissors">Preview</a></button>
-                </div>
-
-                <div class="project-item">
-                    <h3>Earth Ally</h3>
-                     <img src="img/project-thumbnail/earth-ally.png" alt="">
-                    <button class="src-btn"><a href="https://github.com/mrespicio/earth-ally">Source Code</a></button>
-                    <button class="prev-btn"><a href="https://mrespicio.github.io/earth-ally/">Preview</a></button>
-
-                </div>
-
-                <div class="project-item">
-                    <h3>Odin Recipes</h3>
-                    <img src="img/project-thumbnail/odin-recipes.png" alt="">
-                    <button class="src-btn"><a href="https://github.com/mrespicio/odin-recipes">Source Code</a></button>
-                    <button class="prev-btn"><a href="https://github.com/mrespicio/odin-recipes">Preview</a></button>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            here will be a contact thing
+        <section id="projects" class="section-container">
+            <!-- top bar -->
+            <div class="header-bar">
+                <h2>projects</h2>
+                <div class="bar-right">
+                    <button class="collapse" onclick="collapseSection('projects-container')">_</button>
+                    <button>X</button>
+                </div>
+            </div> 
+            <!-- end top bar -->
+            <!-- section content -->
+            <div id="projects-container" class="content-container">
+                <div class="projects-grid">
+
+                    <div class="project-item">
+                        <h3>Pokedex Collab</h3>
+                        <img src="img/project-thumbnail/pokedex.png" alt="">
+                        <div class="project-buttons">
+                        <button class="src-btn"><a href="https://github.com/mrespicio/pokedex">Source Code</a></button></div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Calculator</h3>
+                        <img src="img/project-thumbnail/calculator.png" alt="">
+                        <div class="project-buttons">
+                            <button class="src-btn"><a href="https://github.com/mrespicio/calculator">Source Code</a></button>
+                            <button class="prev-btn"><a href="https://mrespicio.github.io/calculator/">Preview</a></button>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Etch-A-Sketch</h3>
+                        <img src="img/project-thumbnail/etch-a-sketch.png" alt="">
+                        <div class="project-buttons">
+                            <button class="src-btn"><a href="https://github.com/mrespicio/etch-a-sketch">Source Code</a></button>
+                            <button class="prev-btn"><a href="https://github.com/mrespicio/etch-a-sketch">Preview</a></button>
+                            </div>
+                    </div>
+                    <div class="project-item">
+                        <h3>Rock, Paper, Scissors</h3>
+                        <img src="img/project-thumbnail/rps.png" alt="">
+                        <div class="project-buttons">
+                            <button class="src-btn"><a href="https://github.com/mrespicio/rock-paper-scissors">Source Code</a></button>
+                            <button class="prev-btn"><a href="https://github.com/mrespicio/rock-paper-scissors">Preview</a></button>   
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Earth Ally</h3>
+                        <img src="img/project-thumbnail/earth-ally.png" alt="">
+                        <div class="project-buttons">
+                            <button class="src-btn"><a href="https://github.com/mrespicio/earth-ally">Source Code</a></button>
+                            <button class="prev-btn"><a href="https://mrespicio.github.io/earth-ally/">Preview</a></button>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3>Odin Recipes</h3>
+                        <img src="img/project-thumbnail/odin-recipes.png" alt="">
+                        <div class="project-buttons">
+                            <button class="src-btn"><a href="https://github.com/mrespicio/odin-recipes">Source Code</a></button>
+                            <button class="prev-btn"><a href="https://github.com/mrespicio/odin-recipes">Preview</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </main>
-    <footer>        
+
+        <section id="contact" class="section-container">
+            <!-- top bar -->
+            <div class="header-bar">
+                <h2>contact</h2>
+                <div class="bar-right">
+                    <button class="collapse" onclick="collapseSection('contact-container')">_</button>
+                    <button>X</button>
+                </div>
+            </div>
+            <!-- end top bar -->
+            <!-- section content -->
+            <div id="contact-container" class="content-container">
+
+                <a href="mailto: megantr.dev@gmail.com"><img src="img/icons/email.svg" alt=""></a>
+                <a href="https://github.com/mrespicio"><img src="img/icons/github.svg" alt=""></a>
+                <a href="https://www.linkedin.com/in/mtrespicio/"><img src="img/icons/linkedin.svg" alt=""></a>
+                
+            </div>
+        </section>
+
         <nav>
             <ul id="navbar">
-                <li>Home</li>
-                <li>Projects</li>
-                <li>About</li>
+                <li><button><a href="#hero">home</a></button></li>
+                <li><button><a href="#about">about</a></button></li>
+                <li><button><a href="#tech-stack">tech stack</a></button></li>
+                <li><button><a href="#projects">projects</a></button></li>
+                <li><button><a href="#contact">contact</a></button></li>
             </ul>
         </nav>
-    </footer>    
+    </main> 
 </body>
-</form>
+    <script>
+        function collapseSection(elem){
+            let temp = document.getElementById(elem);
+            if(temp.classList.contains('collapsed')) temp.classList.remove('collapsed');
+            else temp.classList.add('collapsed');
+        }
+
+        function selectItem(item){
+            if(item.classList.contains('selected')) item.classList.remove('selected');
+            else item.classList.add('selected');
+        }
+    </script>
 </html>
