@@ -17,22 +17,22 @@ body{
     background-image: 
         linear-gradient(to right, white 1px, transparent 1px),
         linear-gradient(to bottom, white 1px, transparent 1px); 
-    margin: 0;
-    padding: 0;
+    min-width: 320px;
 }
 
 #navbar{
+    background-color: var(--pink);
+    border-top: solid 2px var(--red);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: fixed;
-    gap: 3px;
+    gap: .5rem;
     bottom: 0;
-    background-color: var(--pink);
-    border-top: solid 2px var(--red);
     width: 100vw;
     height: 40px;
     left: 0;
+    min-width: 320px;
 }
 
 #navbar button{
@@ -70,7 +70,7 @@ body{
 }
 
 .section-container{
-    border: solid 2px red;
+    border: solid 2px var(--red);
     background-color: var(--pink);
     max-width: 1280px;
     min-width: 320px;
@@ -102,8 +102,6 @@ a{
 /* hero section */
 #hero{
     background-color: var(--pink);
-    /*height: 100vh;
-    height: 100svh;*/
 }
 
 .hero-container{
@@ -188,7 +186,7 @@ a{
 .project-item{
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 320px;
     align-items: center;
 }
 
