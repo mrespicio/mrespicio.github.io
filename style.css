@@ -26,6 +26,7 @@ nav{
     display: flex;
     justify-content: space-between;
     background-color: var(--dark-pink);
+    padding: 12px 36px;
 }
 
 nav ul{
@@ -36,6 +37,20 @@ nav ul li{
     margin: 0 6px;
 }
 
+nav ul li button{
+    background-color: #FFC2E2;
+    border: solid 2px var(--dark-purple);
+    border-radius: 5px;
+    padding: .5em 1em;
+}
+nav a{
+    text-decoration: none;
+    color: var(--dark-purple);
+}
+
+nav h1{
+    color: black;
+}
 /* content frames */
 .frame{
     border: solid 4px var(--dark-pink);
