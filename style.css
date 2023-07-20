@@ -118,11 +118,33 @@ nav ul li{
 
 
 
+/* about section */
+#about{
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    justify-content: center;
+
+}
+
+#about-container{
+    grid-column: 2 / 3;
+}
+
+.about-pics{
+    grid-column: 1 / 2;
+}
+
+.about-pics img{
+    width: 200px;
+}
 /*tech stack section */
 #tech-stack{
 
 }
 
+#tech-container{
+    
+}
 #tech-stack-grid{
     display: flex;
     flex-wrap: wrap;
@@ -201,4 +223,12 @@ nav ul li{
 
 #contact-container>a>img{
     width: 40px;
+}
+
+/* mobile */
+@media(max-width: 425px){
+    #hero{
+        background-color: #B892FF;
+    }
+
 }
