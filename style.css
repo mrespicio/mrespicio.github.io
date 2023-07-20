@@ -2,8 +2,10 @@
     font-family: 'space mono', 'open sans', 'arial';
     margin: 0;
     padding: 0;
-    --red: #D22020;
-    --pink: #FFDBE1;
+    --dark-pink: #FF90B3;
+    --light-pink: #FFC2E2;
+    --light-purple: #B892FF;
+    --dark-purple: #6E44FF
     scroll-behavior: smooth;
 }
 
@@ -20,115 +22,29 @@ body{
     min-width: 320px;
 }
 
-#navbar{
-    background-color: var(--pink);
-    border-top: solid 2px var(--red);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: fixed;
-    gap: .5rem;
-    bottom: 0;
-    width: 100vw;
-    height: 40px;
-    left: 0;
-    min-width: 320px;
-}
-
-#navbar button{
-    background-color: var(--pink);
-    border: solid 1px var(--red);
-    color: var(--red);
-    height: 30px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-/* all section share this */
-.header-bar{
-    display: flex;
-    justify-content: space-between;
-    background: rgb(210,32,32);
-    background: linear-gradient(36deg, rgba(210,32,32,1) 2%, rgba(255,250,251,1) 100%);
-    border-bottom: solid 1px red;
-    height: 30px;
-    padding: 5px;
-    color: white;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-}
-
-.bar-right{
-    display: flex;
-}
-.header-bar button{
-    background-color: var(--pink);
-    border: solid 1px var(--red);
-    padding: 0 .5rem;
-    font-size: 20px;
-    margin: 1px 5px;
-}
-
-.section-container{
-    border: solid 2px var(--red);
-    background-color: var(--pink);
-    max-width: 1280px;
-    min-width: 320px;
-    margin: 0 min(80wh, 20rem);
-    margin-top: 40px;
-    border-radius: 1rem;
-}
-
-.content-container{
-    background-color: white;
-    margin: 2rem;
-    border-radius: 1rem;
-    padding: 1rem;
-}
-
-.collapsed{
-    display: none;
-}
-
-ul li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-    color: var(--red);
-}
-
-/* hero section */
-#hero{
-    background-color: var(--pink);
-}
-
-.hero-container{
+nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
 }
 
-#hero-left{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.frame{
+    border: solid 2px var(--dark-pink);
+    border-radius: 12px;
 }
 
-#hero-right{
-    
-}
-
-#hero>.hero-container>#hero-left>h1{
-    font-size: 3em;
-}
-
-/*about section */
-#about-content{
+#landing{
+    background-color: var(--light-pink);
+    width: 400px;
 
 }
+
+#labnding > *{
+    width: auto;
+}
+#header{
+    width: auto;
+}
+
 
 /*tech stack section */
 #tech-stack{
