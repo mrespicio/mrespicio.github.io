@@ -5,7 +5,7 @@
     --dark-pink: #FF90B3;
     --light-pink: #FFC2E2;
     --light-purple: #B892FF;
-    --dark-purple: #6E44FF
+    --dark-purple: #6E44FF;
     scroll-behavior: smooth;
 }
 
@@ -143,7 +143,7 @@ nav ul li{
 }
 
 #tech-container{
-    
+
 }
 #tech-stack-grid{
     display: flex;
