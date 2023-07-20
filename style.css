@@ -24,9 +24,17 @@ body{
 
 nav{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--dark-pink);
 }
 
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    margin: 0 6px;
+}
 .frame{
     border: solid 2px var(--dark-pink);
     border-radius: 12px;
@@ -34,17 +42,38 @@ nav{
 
 #landing{
     background-color: var(--light-pink);
-    width: 400px;
-
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    grid-template-rows: repeat(2, 400px);
 }
 
-#labnding > *{
+#landing > *{
     width: auto;
+}
+
+#header{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-content: center;
+}
+
+.pic{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.cta{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#connect{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 #header{
     width: auto;
 }
-
 
 /*tech stack section */
 #tech-stack{

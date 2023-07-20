@@ -14,6 +14,7 @@
 
 
     <main>
+        <!-- navigation -->
         <nav>
             <h1>Megan Respicio</h1>
             <ul>
@@ -24,6 +25,9 @@
                 <li>Contact</li>
             </ul>
         </nav>
+        <!-- navigation -->
+
+        <!-- landing -->
         <section id="landing">
             <div id="header" class="frame">
                 <h3>Hi I'm</h3>
@@ -33,8 +37,10 @@
             <div class="pic" class="frame">
                 <img src="img/avatar.png" alt="" width="200px">
             </div>
-            <button>Hire Me</button>
-            <button>View Projects</button>
+            <div class="cta">
+                <button id="hire-btn">Hire Me</button>
+                <button id="view-btn">View Projects</button>
+            </div>
             <div id="connect" class="frame">
                 <a href="mailto: megantr.dev@gmail.com"><img src="img/icons/email.svg" alt=""></a>
                 <a href="https://github.com/mrespicio"><img src="img/icons/github.svg" alt=""></a>
@@ -43,16 +49,7 @@
         </section>
 
         <section id="about" class="section-container">
-                <!-- top bar -->
-                <div class="header-bar">
-                    <h2>about</h2>
-                    <div class="bar-right">
-                        <button class="collapse" onclick="collapseSection('about-content')">_</button>
-                        <button>X</button>
-                    </div>
-                </div> <!-- end top bar -->
 
-                <!-- collapsible content  -->
             <div id="about-content" class="content-container">
                 <p> Hey there! I'm Megan - a curious and creative individual who's always looking for an adventure.
                     My fascination for web design began in the early days of MySpace and Tumblr where everyone decorated their profiles in HTML and CSS.
@@ -64,17 +61,11 @@
                 </p>
             </div> 
         </section> 
+        <!-- landing -->
+
 
         <section id="tech-stack" class="section-container">
-                <!-- top bar -->
-                <div class="header-bar">
-                    <h2>tech stack</h2>
-                    <div class="bar-right">
-                        <button class="collapse" onclick="collapseSection('tech-container')">_</button>
-                        <button>X</button>
-                    </div>
-            </div>
-            <!-- end top bar -->
+
             <!-- section content -->
             <div id="tech-container" class="content-container">
                 <div id="tech-stack-grid">
@@ -146,15 +137,6 @@
         </section>
 
         <section id="projects" class="section-container">
-            <!-- top bar -->
-            <div class="header-bar">
-                <h2>projects</h2>
-                <div class="bar-right">
-                    <button class="collapse" onclick="collapseSection('projects-container')">_</button>
-                    <button>X</button>
-                </div>
-            </div> 
-            <!-- end top bar -->
             <!-- section content -->
             <div id="projects-container" class="content-container">
                 <div class="projects-grid">
@@ -214,15 +196,7 @@
         </section>
 
         <section id="contact" class="section-container">
-            <!-- top bar -->
-            <div class="header-bar">
-                <h2>contact</h2>
-                <div class="bar-right">
-                    <button class="collapse" onclick="collapseSection('contact-container')">_</button>
-                    <button>X</button>
-                </div>
-            </div>
-            <!-- end top bar -->
+
             <!-- section content -->
             <div id="contact-container" class="content-container">
 
@@ -233,15 +207,7 @@
             </div>
         </section>
 
-        <nav>
-            <ul id="navbar">
-                <li><button><a href="#hero">home</a></button></li>
-                <li><button><a href="#about">about</a></button></li>
-                <li><button><a href="#tech-stack">tech stack</a></button></li>
-                <li><button><a href="#projects">projects</a></button></li>
-                <li><button><a href="#contact">contact</a></button></li>
-            </ul>
-        </nav>
+        
     </main> 
 </body>
     <script>
