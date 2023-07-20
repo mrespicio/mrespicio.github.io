@@ -36,25 +36,27 @@ nav ul li{
     margin: 0 6px;
 }
 .frame{
-    border: solid 2px var(--dark-pink);
+    border: solid 4px var(--dark-pink);
     border-radius: 12px;
+    background-color: white;
 }
 
-#landing{
+#hero{
     background-color: var(--light-pink);
     display: grid;
     grid-template-columns: repeat(2, 400px);
     grid-template-rows: repeat(2, 400px);
-}
-
-#landing > *{
     width: auto;
+    justify-content: center;
+    height: 100svh;
 }
 
 #header{
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     justify-content: center;
+    height: 200px;
+    width: auto;
 }
 
 .pic{
@@ -70,10 +72,12 @@ nav ul li{
 #connect{
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    height: 100px;
 }
-#header{
-    width: auto;
-}
+
+
+
+
 
 /*tech stack section */
 #tech-stack{
