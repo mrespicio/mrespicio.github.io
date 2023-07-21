@@ -47,7 +47,7 @@
                 </div>
                 <div id="connect" class="frame">
                     <div class="frame-top"></div>
-                    <h3>Find Me</h3>
+                    <h4>Find Me</h4>
                     <a href="mailto: megantr.dev@gmail.com"><img src="img/icons/email.svg" alt=""></a>
                     <a href="https://github.com/mrespicio"><img src="img/icons/github.svg" alt=""></a>
                     <a href="https://www.linkedin.com/in/mtrespicio/"><img src="img/icons/linkedin.svg" alt=""></a>
@@ -164,72 +164,53 @@
             <div class="projects-container frame">
                 <div class="frame-top"></div>
                 <h2>Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <h3>Pokedex Collab</h3>
-                        <img src="img/project-thumbnail/pokedex.png" alt="">
-                        <div class="project-buttons">
-                        <button class="src-btn"><a href="https://github.com/mrespicio/pokedex">Source Code</a></button></div>
-                    </div>
 
-                    <div class="project-item">
-                        <h3>Calculator</h3>
-                        <img src="img/project-thumbnail/calculator.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/calculator">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/calculator/">Preview</a></button>
+                <div class="projects-grid-container">
+                    <div class="projects-grid">
+                        <div class="project-item">
+                            <img src="img/project-thumbnail/pokedex.png" alt="">
+                            <h3>Pokedex Collab</h3>
+                        </div>
+                        <div class="project-item">
+                            <img src="img/project-thumbnail/calculator.png" alt="">
+                            <h3>Calculator</h3>
+                        </div>
+                        <div class="project-item">
+                            <img src="img/project-thumbnail/etch-a-sketch.png" alt="">
+                            <h3>Etch-A-Sketch</h3>
+                        </div>
+                        <div class="project-item">
+                            <img src="img/project-thumbnail/rps.png" alt="">
+                            <h3>Rock, Paper, Scissors</h3>
+                        </div>
+                        <div class="project-item">
+                            <img src="img/project-thumbnail/earth-ally.png" alt="">
+                            <h3>Earth Ally</h3>
+                        </div>
+                        <div class="project-item">
+                            <img src="img/project-thumbnail/odin-recipes.png" alt="">
+                            <h3>Odin Recipes</h3>
                         </div>
                     </div>
-
-                    <div class="project-item">
-                        <h3>Etch-A-Sketch</h3>
-                        <img src="img/project-thumbnail/etch-a-sketch.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/etch-a-sketch">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/etch-a-sketch/">Preview</a></button>
-                            </div>
+                    <div class="projects-sidebar">
+                        <h3>project name</h3>
+                        <img src="img/avatar.png" alt="" width="100px">
+                        <p>date</p>
+                        <p>tags</p>
+                        <p>lorem ipsum</p>
                     </div>
-                    <div class="project-item">
-                        <h3>Rock, Paper, Scissors</h3>
-                        <img src="img/project-thumbnail/rps.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/rock-paper-scissors">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/rock-paper-scissors/">Preview</a></button>   
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3>Earth Ally</h3>
-                        <img src="img/project-thumbnail/earth-ally.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/earth-ally">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/earth-ally/">Preview</a></button>
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3>Odin Recipes</h3>
-                        <img src="img/project-thumbnail/odin-recipes.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/odin-recipes">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://github.com/mrespicio/odin-recipes">Preview</a></button>
-                        </div>
+                    <div class="projects-folder">
+                        <p>hello</p>
                     </div>
                 </div>
             </div>
         </section>
 
-
         
     </main> 
 </body>
-    <script>
-        function collapseSection(elem){
-            let temp = document.getElementById(elem);
-            if(temp.classList.contains('collapsed')) temp.classList.remove('collapsed');
-            else temp.classList.add('collapsed');
-        }
 
+    <script>
         function selectItem(item){
             if(item.classList.contains('selected')) item.classList.remove('selected');
             else item.classList.add('selected');
