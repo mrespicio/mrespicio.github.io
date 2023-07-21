@@ -95,7 +95,7 @@ nav h1{
 .hero-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: .5fr repeat(2, 1fr);
     width: max(425px, 80%);
     gap: 20px;
     justify-items: center;
@@ -107,7 +107,7 @@ nav h1{
     grid-row: 2 / 3;
     height: 200px;
     width: min(50%, 400px);
-    /* align-self: end; */
+    align-self: center;
 }
 
 .pic{
@@ -162,9 +162,11 @@ nav h1{
 /* about section */
 #about{
     display: grid;
-    grid-template-columns: repeat(2, 400px);
-    justify-content: center;
-
+    grid-template-columns: repeat(2, 1fr);
+    width: max(425px, 80%);
+    gap: 20px;
+    justify-items: center;
+    margin: 24px auto;
 }
 
 #about-container{
