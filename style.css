@@ -160,13 +160,13 @@ nav h1{
 
 
 /* about section */
-#about{
+.about-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: max(425px, 80%);
     gap: 20px;
     justify-items: center;
-    margin: 24px auto;
+    margin: 44px auto;
 }
 
 #about-container{
@@ -182,13 +182,16 @@ nav h1{
 }
 /*tech stack section */
 #tech-stack{
-
+    background-color: var(--light-pink);
+    padding: 44px 0;
 }
 
 #tech-container{
-
+    width: max(425px, 80%);
+    margin: 24px auto;
 }
-#tech-stack-grid{
+
+#tech-grid{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -224,9 +227,12 @@ nav h1{
 
 
 /* projects section */
+#projects{
+    
+}
 .projects-container{
-    display: flex;
-    align-items: center;
+    width: max(425px, 80%);
+    margin: 0 auto;
 }
 
 .projects-grid{
