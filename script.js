@@ -10,16 +10,31 @@
             this.date = date;
             this.tags = tags;
             this.desc = desc;
-            this.prev = prev;
             this.code = code;
+            this.prev = prev;
         }
 
-        const earthAlly = new Project('Earth Ally', 'img/project-thumbnail/earth-ally.png', '11/2022', 'html, css, flexbox', 'another project')
-        const odinRecipes = new Project('Odin Recipes', 'img/project-thumbnail/odin-recipes.png', '11/2022', 'html, css', 'first project', )
-        const rps = new Project('Rock Paper Scissors', 'img/project-thumbnail/rps.png', '02/2023', 'html, css, javascript', 'rock paper scissors game');
-        const etchASketch = new Project('Etch A Sketch', 'img/project-thumbnail/etch-a-sketch.png', '02/2023', 'html, css, js', 'etch a sketch')
-        const calculator = new Project('Calculator', 'img/project-thumbnail/calculator.png', '02/2023', 'html, css, js', 'calculator project')
-        const pokedex = new Project('Pokedex', 'img/project-thumbnail/pokedex.png', '03/2023', 'html, css, js', 'a pokedex collab');
+        /* my projects */
+        const earthAlly = new Project('Earth Ally', 'img/project-thumbnail/earth-ally.png', 'Nov 2022', 
+                'html, css, flexbox', 
+                'A mock sustainable fashion brand landing page.',
+                'https://github.com/mrespicio/earth-ally', 'https://mrespicio.github.io/earth-ally/')
+        const odinRecipes = new Project('Odin Recipes', 'img/project-thumbnail/odin-recipes.png', 'Nov 2022', 
+                'html, css', 
+                'Simple HTML project showcasing three different food recipes',
+                'https://github.com/mrespicio/odin-recipes', 'https://mrespicio.github.io/odin-recipes/')
+        const rps = new Project('Rock Paper Scissors', 'img/project-thumbnail/rps.png', 'Feb 2023', 'html, css, js',
+                'Rock, Paper, Scissors game versus a computer',
+                'https://github.com/mrespicio/rock-paper-scissors', 'https://mrespicio.github.io/rock-paper-scissors/');
+        const etchASketch = new Project('Etch A Sketch', 'img/project-thumbnail/etch-a-sketch.png', 'Feb 2023', 'html, css, js',
+                'Web app based on the mechanical drawing toy',
+                'https://github.com/mrespicio/etch-a-sketch', 'https://mrespicio.github.io/etch-a-sketch/')
+        const calculator = new Project('Calculator', 'img/project-thumbnail/calculator.png', 'Feb 2023', 'html, css, js',
+                'A simple calculator implementation',
+                'https://github.com/mrespicio/calculator', 'https://mrespicio.github.io/calculator/')
+        const pokedex = new Project('Pokedex', 'img/project-thumbnail/pokedex.png', 'March 2023', 'html, css, js',
+                'Collab to create our version of a pokedex using the Pokemon API',
+                'https://github.com/mrespicio/pokedex', 'https://mrespicio.github.io/pokedex/');
 
         const projectsHolder = []
         projectsHolder.push(earthAlly);
@@ -36,7 +51,6 @@
             else item.classList.add('proj-selected');
         }
 
-
         // iterate this
         const projectsGrid = document.getElementById('projects-grid');
         const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
@@ -49,6 +63,11 @@
         let projTags = document.getElementById('tags-editable');
         let projDesc = document.getElementById('desc-editable');
 
+        let projCode = document.getElementById('code-link-editable');
+        let projCodeBtn = document.getElementById('code-btn-editable');
+        let projPrev = document.getElementById('prev-link-editable');
+        let projPrevBtn = document.getElementById('prev-btn-editable');
+
 
         let projFound = '';
         for(let i = 0; i < projItems.length; i++){
@@ -58,7 +77,6 @@
                 console.log('you clicked on ' + projName);
             });
         }
-
 
         // fix name to proper case
         function findProject(name){
@@ -71,27 +89,26 @@
                 if(item.name == projectName){ // found match, display items in sidebar
                     projName.textContent = item.name;
                     projImg.src = item.tn;
-                    projDate.textContent  = item.date;
-                    projTags.textContent = item.tags;
+                    projDate.textContent  = `Date: ${item.date}`;
+                    projTags.textContent = `Tags: ${item.tags}`;
                     projDesc.textContent = item.desc;
-
-                    console.log('the html img is ' + item.tn);
+                    projCode.href = item.code;
+                    projPrev.href = item.prev;
+                    document.getElementById('code-btn-editable').innerText = 'Source Code';
+                    document.getElementById('prev-btn-editable').innerText = 'Preview';
                 }
             }) 
-
             return projectName;
         }
 
         function toProperCase(str){
             let properCase = [];
             let nameArray = str.split('-'); 
-            for(i = 0; i < nameArray.length; i++){
+            for(i = 0; i < nameArray.length; i++)
                 properCase[i] = nameArray[i].charAt(0).toUpperCase() + nameArray[i].slice(1);
-            }
             let properCaseStr = properCase.join(' ');
             return properCaseStr
         }
-
 
         // function toCamelCase(str){
         //     let camelCase = [];
