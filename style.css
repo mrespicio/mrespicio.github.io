@@ -319,6 +319,10 @@ nav a{
     color: var(--darkest-purple)
 }
 
+#projects-sidebar > a > button:hover{
+    box-shadow: 4px 4px 0 0 var(--dark-pink);
+}
+
 /* contact section */
 #contact{
     margin-bottom: 80px;

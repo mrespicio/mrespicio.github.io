@@ -35,6 +35,12 @@
         const pokedex = new Project('Pokedex', 'img/project-thumbnail/pokedex.png', 'March 2023', 'html, css, js',
                 'Collab to create our version of a pokedex using the Pokemon API',
                 'https://github.com/mrespicio/pokedex', 'https://mrespicio.github.io/pokedex/');
+        const tonicSignUpForm = new Project('Tonic Sign Up Form', 'img/project-thumbnail/tonic-sign-up-form.png', 'June 2023', 'html, css, js',
+                'Sign-Up form for a mock cosmetic brand with form validation',
+                'https://github.com/mrespicio/tonic-sign-up-form', 'https://mrespicio.github.io/tonic-sign-up-form/')
+        const adminDashboard = new Project('Admin Dashboard', 'img/project-thumbnail/admin-dashboard.png', 'July 2023', 'html, css, css grid, js', 
+                'Dashboard implementation using css grid',
+                'https://github.com/mrespicio/admin-dashboard', 'https://mrespicio.github.io/admin-dashboard/')
 
         const projectsHolder = []
         projectsHolder.push(earthAlly);
@@ -43,7 +49,8 @@
         projectsHolder.push(etchASketch);
         projectsHolder.push(calculator);
         projectsHolder.push(pokedex);
-        
+        projectsHolder.push(tonicSignUpForm);
+        projectsHolder.push(adminDashboard);
 
         function selectProject(proj){
             console.log(proj);
