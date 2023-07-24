@@ -6,6 +6,7 @@
     --light-pink: #FFC2E2;
     --light-purple: #B892FF;
     --dark-purple: #6E44FF;
+    --darkest-purple: #3F298E;
     scroll-behavior: smooth;
 }
 
@@ -75,13 +76,13 @@ nav ul li{
 nav ul li button{
     background-color: #FFC2E2;
     border: solid 2px var(--dark-purple);
-    border-radius: 5px;
+    border-radius: .6em;
     padding: .5em 1em;
 }
 
 nav a{
     text-decoration: none;
-    color: var(--dark-purple);
+    color: var(--darkest-purple);
 }
 
 
@@ -308,6 +309,14 @@ nav a{
 
 .proj-selected{
     background-color: var(--light-pink);
+}
+
+#projects-sidebar > a > button{
+    padding: 1em 2em;
+    border-radius: .6em;
+    border: solid 1px var(--dark-purple);
+    background-color: var(--light-pink);
+    color: var(--darkest-purple)
 }
 
 /* contact section */

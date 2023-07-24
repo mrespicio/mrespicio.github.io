@@ -94,8 +94,6 @@
                     projDesc.textContent = item.desc;
                     projCode.href = item.code;
                     projPrev.href = item.prev;
-                    document.getElementById('code-btn-editable').innerText = 'Source Code';
-                    document.getElementById('prev-btn-editable').innerText = 'Preview';
                 }
             }) 
             return projectName;
