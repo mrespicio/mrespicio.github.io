@@ -14,12 +14,12 @@
             this.code = code;
         }
 
-        const earthAlly = new Project('Earth Ally', '<img src="img/project-thumbnail/earth-ally.png">', '11/2022', 'html, css, flexbox', 'another project')
+        const earthAlly = new Project('Earth Ally', 'img/project-thumbnail/earth-ally.png', '11/2022', 'html, css, flexbox', 'another project')
         const odinRecipes = new Project('Odin Recipes', 'img/project-thumbnail/odin-recipes.png', '11/2022', 'html, css', 'first project', )
-        const rps = new Project('Rock Paper Scissors', 'a pic', '02/2023', 'html, css, javascript', 'rock paper scissors game');
-        const etchASketch = new Project('Etch A Sketch', 'a pic', '02/2023', 'html, css, js', 'etch a sketch')
-        const calculator = new Project('Calculator', 'a pic', '02/2023', 'html, css, js', 'calculator project')
-        const pokedex = new Project('Pokedex', 'a pic', '03/2023', 'html, css, js', 'a pokedex collab');
+        const rps = new Project('Rock Paper Scissors', 'img/project-thumbnail/rps.png', '02/2023', 'html, css, javascript', 'rock paper scissors game');
+        const etchASketch = new Project('Etch A Sketch', 'img/project-thumbnail/etch-a-sketch.png', '02/2023', 'html, css, js', 'etch a sketch')
+        const calculator = new Project('Calculator', 'img/project-thumbnail/calculator.png', '02/2023', 'html, css, js', 'calculator project')
+        const pokedex = new Project('Pokedex', 'img/project-thumbnail/pokedex.png', '03/2023', 'html, css, js', 'a pokedex collab');
 
         const projectsHolder = []
         projectsHolder.push(earthAlly);
@@ -44,7 +44,7 @@
 
         let projSidebar = document.getElementById('projects-sidebar');
         let projName = document.getElementById('project-name-editable');
-        let projImg = document.getElementById('project-thumbnailp-editable');
+        let projImg = document.getElementById('project-thumbnail-editable');
         let projDate = document.getElementById('date-editable');
         let projTags = document.getElementById('tags-editable');
         let projDesc = document.getElementById('desc-editable');
@@ -70,13 +70,15 @@
             projectsHolder.forEach(item => {
                 if(item.name == projectName){ // found match, display items in sidebar
                     projName.textContent = item.name;
-                    projImg.innerHTML = item.tn;
+                    projImg.src = item.tn;
                     projDate.textContent  = item.date;
                     projTags.textContent = item.tags;
                     projDesc.textContent = item.desc;
-                    console.log(projImg.innerHTML);
+
+                    console.log('the html img is ' + item.tn);
                 }
             }) 
+
             return projectName;
         }
 
