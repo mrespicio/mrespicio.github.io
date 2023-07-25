@@ -29,7 +29,7 @@
 
         <!-- hero -->
         <section id="hero">
-            <div class="hero-container">
+            <div id="hero-container">
                 <div id="header" class="frame">
                     <div class="frame-top"></div>
                     <h3>Hi I'm</h3>
@@ -37,11 +37,11 @@
                     <hr>
                     <h2>Front End Web Developer</h2>
                 </div>
-                <div class="pic frame">
+                <div id="hero-photo" class="frame">
                     <div class="frame-top"></div>
-                    <img src="img/avatar.png" alt="" width="400px">
+                    <img src="img/avatar.png" alt="profile pic, currently a photo of snorlax">
                 </div>
-                <div class="cta">
+                <div id="cta-grid">
                     <a href="mailto: megantr.dev@gmail.com"><button id="hire-btn" type="button">Hire Me</button></a>
                     <a href="https://github.com/mrespicio" target="_blank"><button id="view-btn" type="button">View Projects</button></a>
                 </div>
@@ -58,7 +58,7 @@
 
 
         <section id="about">
-            <div class="about-container">
+            <div id="about-container">
                 <div class="about-pics">
                     <img src="img/avatar.png" id="pic-1" alt="" class="frame">
                     <img src="img/avatar (1).png" id="pic-2" alt="" class="frame">
@@ -160,13 +160,15 @@
         </section>
 
         <section id="projects">
-            <!-- section content -->
-            <div class="projects-container frame">
+            <!-- box -->
+            <div id="projects-container" class="frame">
                 <div class="frame-top"></div>
-                <h2>Projects</h2>
 
-                <div class="projects-grid-container">
-                    <div id="projects-grid">
+                <!-- grid -->
+                <div id="projects-grid-container">
+                    <h2>Projects</h2>
+
+                    <div id="projects-item-grid">
                         <div id="admin-dashboard" class="project-item featured recent">
                             <img src="img/project-thumbnail/admin-dashboard.png" alt="">
                             <h3>Admin Dashboard</h3>
@@ -211,24 +213,24 @@
                             <button id="code-btn-editable">Source Code</button></a>
                         <a id="prev-link-editable" target="_blank" href="">
                             <button id="prev-btn-editable">Preview</button></a>
-                        
                     </div>
-                    <div class="projects-folders">
+
+                    <div id="projects-folders">
                         <div id="featured-folder" class="folder-item folder-selected">
-                            <img src="img/buttons/folder-opened.svg" width="100px" alt="">
+                            <img src="img/buttons/folder-opened.svg" alt="">
                             <p>Featured Projects</p>
                         </div>
                         <div id="recent-folder" class="folder-item">
-                            <img src="img/buttons/folder-closed.svg" width="100px" alt="">
+                            <img src="img/buttons/folder-closed.svg" alt="">
                             <p>Recent Projects</p>
                         </div>
                         <div id="all-folder" class="folder-item">
-                            <img src="img/buttons/folder-closed.svg" width="100px" alt="">
+                            <img src="img/buttons/folder-closed.svg" alt="">
                             <p>All Projects</p>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> <!-- grid -->
+            </div> <!-- box -->
         </section>
 
         
