@@ -372,10 +372,9 @@ nav{
             background-color: var(--light-pink);
             border-radius: 8px;
         }
-    /* .folder-selected{
-        background-color: var(--light-pink);
-    }
 
+
+    /*
     .hide-project{
         display: none;
     }

@@ -4,7 +4,8 @@
 //     else item.classList.add('selected');
 // }
 
-function Project(name, tn, date, tags, desc, prev, code){
+// project object - this info is to display on sidebar
+function Project(name, tn, date, tags, desc, prev, code, featured, recent){
     this.name = name;
     this.tn = tn;
     this.date = date;
@@ -13,14 +14,14 @@ function Project(name, tn, date, tags, desc, prev, code){
     this.code = code;
     this.prev = prev;
 }
+// display array
 
+// if project-item then it goes into 'all' folder
 /* my projects */
-const earthAlly = new Project('Earth Ally', 'img/project-thumbnail/earth-ally.png', 'Nov 2022', 
-        'html, css, flexbox', 
+const earthAlly = new Project('Earth Ally', 'img/project-thumbnail/earth-ally.png', 'Nov 2022', 'html, css, flexbox', 
         'A mock sustainable fashion brand landing page.',
         'https://github.com/mrespicio/earth-ally', 'https://mrespicio.github.io/earth-ally/')
-const odinRecipes = new Project('Odin Recipes', 'img/project-thumbnail/odin-recipes.png', 'Nov 2022', 
-        'html, css', 
+const odinRecipes = new Project('Odin Recipes', 'img/project-thumbnail/odin-recipes.png', 'Nov 2022', 'html, css', 
         'Simple HTML project showcasing three different food recipes',
         'https://github.com/mrespicio/odin-recipes', 'https://mrespicio.github.io/odin-recipes/')
 const rps = new Project('Rock Paper Scissors', 'img/project-thumbnail/rps.png', 'Feb 2023', 'html, css, js',
@@ -42,41 +43,61 @@ const adminDashboard = new Project('Admin Dashboard', 'img/project-thumbnail/adm
         'Dashboard implementation using css grid',
         'https://github.com/mrespicio/admin-dashboard', 'https://mrespicio.github.io/admin-dashboard/')
 
-const projectsHolder = []
-projectsHolder.push(earthAlly);
-projectsHolder.push(odinRecipes);
-projectsHolder.push(rps);
-projectsHolder.push(etchASketch);
-projectsHolder.push(calculator);
-projectsHolder.push(pokedex);
-projectsHolder.push(tonicSignUpForm);
-projectsHolder.push(adminDashboard);
+// contains all projects
+const allFolder = [];
+allFolder.push(earthAlly, odinRecipes, rps, etchASketch,
+    calculator, pokedex, tonicSignUpForm, adminDashboard);
 
-function selectProject(proj){
-    console.log(proj);
-    if(item.classList.contains('proj-selected')) item.classList.remove('proj-selected');
-    else item.classList.add('proj-selected');
+const featuredFolder = [];
+featuredFolder.push(earthAlly, tonicSignUpForm, calculator);
+
+const recentFolder = [];
+recentFolder.push(adminDashboard, tonicSignUpForm, pokedex, calculator);
+
+// display project
+// find selected folder
+// display array with proj name and thumbnail
+
+
+const foldersObj = document.getElementById('projects-folders'); //object
+
+const folders = foldersObj.getElementsByClassName('folder-item'); //collection
+console.log(folders);
+
+// iterate the grid to view each item
+let selectedFolder = '';
+for(let i = 0; i < folders.length; i++){
+    // console.log(folders[i].id);
+    if(folders[i].classList.contains('folder-selected')){
+        selectedFolder = folders[i].id;
+    }
 }
+console.log('the selected folder is ' + selectedFolder);
+
+
+
+// function selectProject(proj){
+//     console.log(proj);
+//     if(item.classList.contains('proj-selected')) item.classList.remove('proj-selected');
+//     else item.classList.add('proj-selected');
+// }
 
 // iterate this
 const projectsGrid = document.getElementById('projects-item-grid'); // object
 const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
 // get div ids
 
-let projSidebar = document.getElementById('projects-sidebar');
-let projName = document.getElementById('project-name-editable');
-let projImg = document.getElementById('project-thumbnail-editable');
-let projDate = document.getElementById('date-editable');
-let projTags = document.getElementById('tags-editable');
-let projDesc = document.getElementById('desc-editable');
-
-let projCode = document.getElementById('code-link-editable');
-let projCodeBtn = document.getElementById('code-btn-editable');
-let projPrev = document.getElementById('prev-link-editable');
-let projPrevBtn = document.getElementById('prev-btn-editable');
+/* ------------------- find project to display on sidebar ------------------- */
+let projName = document.getElementById('sb-project-name');
+let projImg = document.getElementById('sb-project-thumbnail');
+let projDate = document.getElementById('sb-date');
+let projTags = document.getElementById('sb-tags');
+let projDesc = document.getElementById('sb-desc');
+let projCode = document.getElementById('sb-code-link');
+let projPrev = document.getElementById('sb-prev-link');
 
 
-let projFound = '';
+// let projFound = '';
 for(let i = 0; i < projItems.length; i++){
     console.log(projItems[i].id);
     projItems[i].addEventListener('click', () => {
@@ -90,7 +111,7 @@ function findProject(name){
     let projectName = toProperCase(name); //get project name
     // iterate projectsHolder object to find 
     // projectName == project.name
-    projectsHolder.forEach(item => {
+    allFolder.forEach(item => {
         if(item.name == projectName){ // found match, display items in sidebar
             projName.textContent = item.name;
             projImg.src = item.tn;
@@ -113,6 +134,10 @@ function toProperCase(str){
     return properCaseStr
 }
 
+/* ------------------- find project to display on sidebar ------------------- */
+
+
+
 // function toCamelCase(str){
 //     let camelCase = [];
 //     let nameArray = str.split('-'); 
@@ -126,6 +151,25 @@ function toProperCase(str){
 // }
 
 
+// iterate folders and find the selected one
+// const foldersObj = document.getElementById('projects-folders'); //object
+
+// const folders = foldersObj.getElementsByClassName('folder-item'); //collection
+// console.log(folders);
+
+
+
+
+// const projectsGrid = document.getElementById('projects-item-grid'); // object
+// const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
+
+// projectsGrid = grid
+// projItems = each item
+
+
+
+
+
 // if class == folder selected
 // img src = open folder
 // if class has no folder selected
@@ -134,8 +178,8 @@ function toProperCase(str){
 // all project-item are in all projects folder
 
 // display featured folder
-const projectsList = document.getElementById('projects-item-grid');  // object
-console.log('all projects is ' + typeof(allProjects));
+// const projectsList = document.getElementById('projects-item-grid');  // object
+// console.log('all projects is ' + typeof(allProjects));
 // iterate projects grid
 // if project does not have class same name of folder
 // add hide-project class
