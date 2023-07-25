@@ -248,6 +248,7 @@ nav{
 
             .tech-item:hover{
                 background-color: var(--light-pink);
+                border-radius: 8px;;
             }
 
 /* ------------------------------------------------------------------------------------------------------------- */
@@ -321,18 +322,22 @@ nav{
             align-items: center;
             text-align: center;
             /* border: solid 1px blue; */
-        }
-
-        .project-item:hover{
-            background-color: var(--light-pink);
+            padding: 10px;
+            border-radius: 8px;;
         }
 
         .project-item>img{
+            border-radius: 8px;;
             min-width: 80px;
             width: 20rem;
             margin-bottom: .5rem;
         }
 
+        .folder-item:hover,
+        .project-item:hover{
+            background-color: var(--light-pink);
+            border-radius: 8px;
+        }
 
     /* folders at bottom */
     #projects-folders{
@@ -345,7 +350,7 @@ nav{
 
         /* folder item */
         .folder-item{
-            border: solid 1px purple;
+            /* border: solid 1px purple; */
             width: 200px;
             text-align: center;
         }
