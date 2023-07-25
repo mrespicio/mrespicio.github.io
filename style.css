@@ -303,6 +303,10 @@ nav a{
     width: 200px;
 }
 
+.folder-selected{
+    
+}
+
 .selected{
     background-color: var(--light-pink);
 }
@@ -310,6 +314,7 @@ nav a{
 .proj-selected{
     background-color: var(--light-pink);
 }
+
 
 #projects-sidebar > a > button{
     padding: 1em 2em;
