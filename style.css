@@ -156,6 +156,10 @@ nav{
             font-size: 1em;
         }
 
+        #cta-grid button:hover{
+
+        }
+
         #hire-btn{
             background-color: var(--yellow);
             border: solid 4px white;
@@ -364,6 +368,10 @@ nav{
             margin: 0 auto;
         }
 
+        .folder-selected { 
+            background-color: var(--light-pink);
+            border-radius: 8px;
+        }
     /* .folder-selected{
         background-color: var(--light-pink);
     }

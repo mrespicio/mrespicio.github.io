@@ -59,7 +59,7 @@ function selectProject(proj){
 }
 
 // iterate this
-const projectsGrid = document.getElementById('projects-grid'); // object
+const projectsGrid = document.getElementById('projects-item-grid'); // object
 const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
 // get div ids
 
@@ -134,9 +134,8 @@ function toProperCase(str){
 // all project-item are in all projects folder
 
 // display featured folder
-const allProjects = document.getElementById('projectsGrid');  // object
+const projectsList = document.getElementById('projects-item-grid');  // object
 console.log('all projects is ' + typeof(allProjects));
-const project
 // iterate projects grid
 // if project does not have class same name of folder
 // add hide-project class
