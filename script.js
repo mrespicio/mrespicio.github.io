@@ -138,13 +138,6 @@ function displaySelectedFolder(folder){
     })
 }
 
-// function selectProject(proj){
-//     console.log(proj);
-//     if(item.classList.contains('proj-selected')) item.classList.remove('proj-selected');
-//     else item.classList.add('proj-selected');
-// }
-
-
 /* ------------------- find project to display on sidebar ------------------- */
 let projName = document.getElementById('sb-project-name');
 let projImg = document.getElementById('sb-project-thumbnail');
@@ -164,12 +157,7 @@ for(let i = 0; i < projItems.length; i++){
 }
 }
 
-// fix name to proper case
 function findProject(name){
-    //let projectName = toProperCase(name); //get project name //projectName in This Format
-    //let projectName = name;
-    // iterate projectsHolder object to find 
-    // projectName == project.name
     allFolder.forEach(item => {
         if(item.variable == name){ // found match, display items in sidebar
             projName.textContent = item.name;
@@ -195,40 +183,3 @@ function toProperCase(str){
 
 /* ------------------- end find project to display on sidebar ------------------- */
 
-
-
-
-
-// iterate folders and find the selected one
-// const foldersObj = document.getElementById('projects-folders'); //object
-
-// const folders = foldersObj.getElementsByClassName('folder-item'); //collection
-// console.log(folders);
-
-
-
-
-// const projectsGrid = document.getElementById('projects-item-grid'); // object
-// const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
-
-// projectsGrid = grid
-// projItems = each item
-
-
-
-
-
-// if class == folder selected
-// img src = open folder
-// if class has no folder selected
-// img src = closed folder
-
-// all project-item are in all projects folder
-
-// display featured folder
-// const projectsList = document.getElementById('projects-item-grid');  // object
-// console.log('all projects is ' + typeof(allProjects));
-// iterate projects grid
-// if project does not have class same name of folder
-// add hide-project class
-// else remove hide-project class
