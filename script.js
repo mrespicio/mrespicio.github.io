@@ -54,27 +54,77 @@ featuredFolder.push(earthAlly, tonicSignUpForm, calculator);
 const recentFolder = [];
 recentFolder.push(adminDashboard, tonicSignUpForm, pokedex, calculator);
 
-// display project
-// find selected folder
-// display array with proj name and thumbnail
-
-
 const foldersObj = document.getElementById('projects-folders'); //object
-
 const folders = foldersObj.getElementsByClassName('folder-item'); //collection
-console.log(folders);
 
-// iterate the grid to view each item
-let selectedFolder = '';
-for(let i = 0; i < folders.length; i++){
-    // console.log(folders[i].id);
-    if(folders[i].classList.contains('folder-selected')){
-        selectedFolder = folders[i].id;
+// object, used here and to find project to display on sidebar
+const projectsGrid = document.getElementById('projects-item-grid'); 
+const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
+
+// find which folder is selected
+// give folders event listeners
+
+for(let fold of folders){
+    fold.addEventListener('click', () => {
+        for(let f of folders){
+            f.classList.remove('folder-selected');
+            // console.log(f + 'thing removed');
+        }
+        fold.classList.add('folder-selected');
+        changeFolder();
+    }) //event listener
+} // for
+
+/* ------------------- display selected folder ------------------- */
+
+function changeFolder(){
+	while(projectsGrid.lastElementChild) 
+		projectsGrid.removeChild(projectsGrid.lastElementChild)
+	
+    // iterate the grid to view each item
+    for(let i = 0; i < folders.length; i++){
+        if(folders[i].classList.contains('folder-selected'))
+            selectedFolder = folders[i].id;
     }
+    selectedFolder = toCamelCase(selectedFolder); // now same name as array name
+    switch(selectedFolder){
+        case 'featuredFolder':
+            displaySelectedFolder(featuredFolder);
+            break;
+        case 'recentFolder':
+            displaySelectedFolder(recentFolder);
+            break;
+        case 'allFolder':
+            displaySelectedFolder(allFolder);
+            break;
+        default:
+            console.log('no folder');
+        }
 }
-console.log('the selected folder is ' + selectedFolder);
 
 
+
+function displaySelectedFolder(folder){
+    folder.forEach(item => {
+        // div
+        let projItem = document.createElement('div');
+        projItem.id = item.name;
+        projItem.classList.add('project-item');
+
+        // img
+        let projItemImg = document.createElement('img');
+        projItemImg.src = item.tn;
+
+        // header
+        let projItemTitle = document.createElement('h3');
+        projItemTitle.innerText = item.name;
+
+        projItem.append(projItemImg);
+        projItem.append(projItemTitle);
+
+        projectsGrid.append(projItem);
+    })
+}
 
 // function selectProject(proj){
 //     console.log(proj);
@@ -82,10 +132,6 @@ console.log('the selected folder is ' + selectedFolder);
 //     else item.classList.add('proj-selected');
 // }
 
-// iterate this
-const projectsGrid = document.getElementById('projects-item-grid'); // object
-const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
-// get div ids
 
 /* ------------------- find project to display on sidebar ------------------- */
 let projName = document.getElementById('sb-project-name');
@@ -134,21 +180,21 @@ function toProperCase(str){
     return properCaseStr
 }
 
-/* ------------------- find project to display on sidebar ------------------- */
+/* ------------------- end find project to display on sidebar ------------------- */
 
 
 
-// function toCamelCase(str){
-//     let camelCase = [];
-//     let nameArray = str.split('-'); 
+function toCamelCase(str){
+    let camelCase = [];
+    let nameArray = str.split('-'); 
 
-//     for(i = 0; i < nameArray.length; i++){
-//         if(i == 0) camelCase[0] = nameArray[0];
-//         else camelCase[i] = nameArray[i].charAt(0).toUpperCase() + nameArray[i].slice(1);
-//     }
-//     let camelCaseStr = camelCase.join('');
-//     return camelCaseStr
-// }
+    for(i = 0; i < nameArray.length; i++){
+        if(i == 0) camelCase[0] = nameArray[0];
+        else camelCase[i] = nameArray[i].charAt(0).toUpperCase() + nameArray[i].slice(1);
+    }
+    let camelCaseStr = camelCase.join('');
+    return camelCaseStr
+}
 
 
 // iterate folders and find the selected one
