@@ -15,42 +15,41 @@ function Project(variable, name, tn, date, tags, desc, prev, code, featured, rec
     this.code = code;
     this.prev = prev;
 }
-// display array
-
 // if project-item then it goes into 'all' folder
 /* my projects */
-const earthAlly = new Project('earth-ally', 'Earth Ally', 'img/project-thumbnail/earth-ally.png', 'Nov 2022', 'html, css, flexbox', 
-        'A mock sustainable fashion brand landing page.',
-        'https://github.com/mrespicio/earth-ally', 'https://mrespicio.github.io/earth-ally/')
-const odinRecipes = new Project('odin-recipes', 'Odin Recipes', 'img/project-thumbnail/odin-recipes.png', 'Nov 2022', 'html, css', 
-        'Simple HTML project showcasing three different food recipes',
-        'https://github.com/mrespicio/odin-recipes', 'https://mrespicio.github.io/odin-recipes/')
+const adminDashboard = new Project('admin-dashboard', 'Admin Dashboard', 'img/project-thumbnail/admin-dashboard.png', 'July 2023', 'html, css, css grid, js', 
+    'Dashboard implementation using css grid',
+    'https://github.com/mrespicio/admin-dashboard', 'https://mrespicio.github.io/admin-dashboard/')
+const tonicSignUpForm = new Project('tonic-sign-up-form', 'Tonic Sign Up Form', 'img/project-thumbnail/tonic-sign-up-form.png', 'June 2023', 'html, css, js',
+    'Sign-Up form for a mock cosmetic brand with form validation',
+    'https://github.com/mrespicio/tonic-sign-up-form', 'https://mrespicio.github.io/tonic-sign-up-form/')    
+const pokedex = new Project('pokedex', 'Pokedex', 'img/project-thumbnail/pokedex.png', 'March 2023', 'html, css, js',
+    'Collab to create our version of a pokedex using the Pokemon API',
+    'https://github.com/mrespicio/pokedex', 'https://mrespicio.github.io/pokedex/');
+const calculator = new Project('calculator', 'Calculator', 'img/project-thumbnail/calculator.png', 'Feb 2023', 'html, css, js',
+    'A simple calculator implementation',
+    'https://github.com/mrespicio/calculator', 'https://mrespicio.github.io/calculator/')
+const etchASketch = new Project('etch-a-sketch', 'Etch A Sketch', 'img/project-thumbnail/etch-a-sketch.png', 'Feb 2023', 'html, css, js',
+    'Web app based on the mechanical drawing toy',
+    'https://github.com/mrespicio/etch-a-sketch', 'https://mrespicio.github.io/etch-a-sketch/')
 const rps = new Project('rock-paper-scissors', 'Rock Paper Scissors', 'img/project-thumbnail/rps.png', 'Feb 2023', 'html, css, js',
         'Rock, Paper, Scissors game versus a computer',
         'https://github.com/mrespicio/rock-paper-scissors', 'https://mrespicio.github.io/rock-paper-scissors/');
-const etchASketch = new Project('etch-a-sketch', 'Etch A Sketch', 'img/project-thumbnail/etch-a-sketch.png', 'Feb 2023', 'html, css, js',
-        'Web app based on the mechanical drawing toy',
-        'https://github.com/mrespicio/etch-a-sketch', 'https://mrespicio.github.io/etch-a-sketch/')
-const calculator = new Project('calculator', 'Calculator', 'img/project-thumbnail/calculator.png', 'Feb 2023', 'html, css, js',
-        'A simple calculator implementation',
-        'https://github.com/mrespicio/calculator', 'https://mrespicio.github.io/calculator/')
-const pokedex = new Project('pokedex', 'Pokedex', 'img/project-thumbnail/pokedex.png', 'March 2023', 'html, css, js',
-        'Collab to create our version of a pokedex using the Pokemon API',
-        'https://github.com/mrespicio/pokedex', 'https://mrespicio.github.io/pokedex/');
-const tonicSignUpForm = new Project('tonic-sign-up-form', 'Tonic Sign Up Form', 'img/project-thumbnail/tonic-sign-up-form.png', 'June 2023', 'html, css, js',
-        'Sign-Up form for a mock cosmetic brand with form validation',
-        'https://github.com/mrespicio/tonic-sign-up-form', 'https://mrespicio.github.io/tonic-sign-up-form/')
-const adminDashboard = new Project('admin-dashboard', 'Admin Dashboard', 'img/project-thumbnail/admin-dashboard.png', 'July 2023', 'html, css, css grid, js', 
-        'Dashboard implementation using css grid',
-        'https://github.com/mrespicio/admin-dashboard', 'https://mrespicio.github.io/admin-dashboard/')
+const earthAlly = new Project('earth-ally', 'Earth Ally', 'img/project-thumbnail/earth-ally.png', 'Nov 2022', 'html, css, flexbox', 
+    'A mock sustainable fashion brand landing page.',
+    'https://github.com/mrespicio/earth-ally', 'https://mrespicio.github.io/earth-ally/')
+const odinRecipes = new Project('odin-recipes', 'Odin Recipes', 'img/project-thumbnail/odin-recipes.png', 'Nov 2022', 'html, css', 
+    'Simple HTML project showcasing three different food recipes',
+    'https://github.com/mrespicio/odin-recipes', 'https://mrespicio.github.io/odin-recipes/')
 
 // contains all projects
 const allFolder = [];
-allFolder.push(earthAlly, odinRecipes, rps, etchASketch,
-    calculator, pokedex, tonicSignUpForm, adminDashboard);
+allFolder.push(adminDashboard, tonicSignUpForm, 
+    pokedex, calculator, etchASketch, rps, earthAlly, odinRecipes);
 
 const featuredFolder = [];
-featuredFolder.push(earthAlly, tonicSignUpForm, calculator);
+featuredFolder.push(adminDashboard, tonicSignUpForm, etchASketch, 
+    earthAlly);
 
 const recentFolder = [];
 recentFolder.push(adminDashboard, tonicSignUpForm, pokedex, calculator);
@@ -62,8 +61,9 @@ const folders = foldersObj.getElementsByClassName('folder-item'); //collection
 const projectsGrid = document.getElementById('projects-item-grid'); 
 const projItems = projectsGrid.getElementsByClassName('project-item'); // collection
 
-// find which folder is selected
-// give folders event listeners
+
+changeFolder();
+updateSidebar();
 
 for(let fold of folders){
     fold.addEventListener('click', () => {
@@ -73,9 +73,9 @@ for(let fold of folders){
         }
         fold.classList.add('folder-selected');
         changeFolder();
-        addStuff();
-    }) //event listener
-} // for
+        updateSidebar();
+    }) 
+} 
 
 /* ------------------- display selected folder ------------------- */
 
@@ -154,7 +154,7 @@ let projDesc = document.getElementById('sb-desc');
 let projCode = document.getElementById('sb-code-link');
 let projPrev = document.getElementById('sb-prev-link');
 
-function addStuff(){
+function updateSidebar(){
 for(let i = 0; i < projItems.length; i++){
     console.log(projItems[i].id);
     projItems[i].addEventListener('click', () => {

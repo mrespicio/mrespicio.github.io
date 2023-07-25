@@ -265,7 +265,6 @@ nav{
 /* contents inside box */
 #projects-container{
     width: max(425px, 80%);
-    border: solid 3px green;
     margin: 0 auto;
 }
 
@@ -276,7 +275,6 @@ nav{
 
     /* grid for whole project box */
     #projects-grid-container{
-        border: solid 4px blue;
         width: 100%;
         display: grid;
         grid-template-columns: 3fr 1fr;
