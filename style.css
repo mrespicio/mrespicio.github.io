@@ -239,9 +239,10 @@ nav{
 
         .tech-item{
             background-color: white;
-            width: 3.5rem;
+            width: 3.5em;
             height: auto;
             padding: 1.5rem;
+            text-overflow: ellipsis;
         }
 
             .tech-item>p{
@@ -259,15 +260,19 @@ nav{
 
 /* projects section */
 #projects{
-    
+    height: min(auto, 800px);
 }
 
 /* contents inside box */
 #projects-container{
     width: max(425px, 80%);
-    margin: 0 auto;
+    margin: 44px auto;
+    height: 100%;
 }
 
+    .frame-stick{
+        display: fixed;
+    }
     /* with item is clicked on, applied to project items and folder items */
     .selected{
         background-color: var(--light-pink);
@@ -310,6 +315,7 @@ nav{
     /* big grid of project items display */
     #projects-item-grid{
         /* border: solid 2px green; */
+        /* height: min(auto, 400px); */
         margin: 0 auto;
         display: grid; 
         gap: 1rem;
@@ -317,6 +323,8 @@ nav{
         grid-column: 1 / 2;
         width: 100%;
         justify-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
         .project-item{

@@ -91,14 +91,17 @@ function toCamelCase(str){
     return camelCaseStr
 }
 
+// TODO: make folder change img src
 function changeFolder(){
 	while(projectsGrid.lastElementChild) 
 		projectsGrid.removeChild(projectsGrid.lastElementChild)
 	
-    // iterate the grid to view each item
+    // iterate the folders to view each item
     for(let i = 0; i < folders.length; i++){
-        if(folders[i].classList.contains('folder-selected'))
+        if(folders[i].classList.contains('folder-selected')){
             selectedFolder = folders[i].id;
+            //folders[i].getElementsByTagName('img').src = 'img/buttons/folder-closed.svg'
+        }
     }
     selectedFolder = toCamelCase(selectedFolder); // now same name as array name
     switch(selectedFolder){
@@ -135,6 +138,8 @@ function displaySelectedFolder(folder){
         projItem.append(projItemTitle);
 
         projectsGrid.append(projItem); //div
+
+        // let folderIcon = document.get
     })
 }
 
@@ -151,8 +156,8 @@ function updateSidebar(){
 for(let i = 0; i < projItems.length; i++){
     console.log(projItems[i].id);
     projItems[i].addEventListener('click', () => {
-        let projName = findProject(projItems[i].id); // id in this-format
-        console.log('you clicked on ' + projName);
+        findProject(projItems[i].id);
+        // console.log('youve found ' + projItems[i].id);
     });
 }
 }
@@ -169,7 +174,7 @@ function findProject(name){
             projPrev.href = item.prev;
         }
     }) 
-    return projectName;
+    // return projectName;
 }
 
 function toProperCase(str){
