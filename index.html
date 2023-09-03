@@ -14,59 +14,76 @@
 
 
     <main>
-        <section id="hero" class="section-container">
-            <div class="header-bar"><h2>welcome</h2></div> 
-            <div class="hero-container">
-                <section id="hero-left" class="content-container">
-                    <h3>Hi, I'm</h3>
+        <!-- navigation -->
+        <nav>
+            <h1>Megan Respicio</h1>
+            <ul>
+                <li><button><a href="#hero">home</a></button></li>
+                <li><button><a href="#about">about</a></button></li>
+                <li><button><a href="#tech-stack">tech stack</a></button></li>
+                <li><button><a href="#projects">projects</a></button></li>
+                <li><button><a href="#contact">contact</a></button></li>
+            </ul>
+        </nav>
+        <!-- navigation -->
+
+        <!-- hero -->
+        <section id="hero">
+            <div id="hero-container">
+                <div id="header" class="frame">
+                    <div class="frame-top"></div>
+                    <h3>Hi I'm</h3>
                     <h1>Megan Respicio</h1>
-                    <hr style="border-top: 2px solid red">
+                    <hr>
                     <h2>Front End Web Developer</h2>
-                    <p>I'm here for a good time</p>
-                    <button><a href="#projects">view projects</a></button>
-                </section>
-                <section id="hero-right">
-                    <img style="width: 100px; height: auto" src="img/avatar.png" alt="">
-                </section>
+                </div>
+                <div id="hero-photo" class="frame">
+                    <div class="frame-top"></div>
+                    <img src="img/avatar.png" alt="profile pic, currently a photo of snorlax">
+                </div>
+                <div id="cta-grid">
+                    <a href="mailto: mrespicio.dev@gmail.com"><button id="hire-btn" type="button">Hire Me</button></a>
+                    <a href="#projects"><button id="view-btn" type="button">View Projects</button></a>
+                </div>
+                <div id="connect" class="frame">
+                    <div class="frame-top"></div>
+                    <h4>Find Me</h4>
+                    <a href="mailto: mrespicio.dev@gmail.com"><img src="img/icons/email.svg" alt=""></a>
+                    <a href="https://github.com/mrespicio"><img src="img/icons/github.svg" alt=""></a>
+                    <a href="https://www.linkedin.com/in/mtrespicio/"><img src="img/icons/linkedin.svg" alt=""></a>
+                </div>
             </div>
         </section>
+        <!-- hero -->
 
-        <section id="about" class="section-container">
-                <!-- top bar -->
-                <div class="header-bar">
-                    <h2>about</h2>
-                    <div class="bar-right">
-                        <button class="collapse" onclick="collapseSection('about-content')">_</button>
-                        <button>X</button>
-                    </div>
-                </div> <!-- end top bar -->
 
-                <!-- collapsible content  -->
-            <div id="about-content" class="content-container">
-                <p> Hey there! I'm Megan - a curious and creative individual who's always looking for an adventure.
-                    My fascination for web design began in the early days of MySpace and Tumblr where everyone decorated their profiles in HTML and CSS.
-                    I was intrigued by the idea of some pages on the internet being a space for self-expression. 
-                    <br><br>
-                    I've obtained a Bachelor's in Computer Science at San Diego State University. I've learned a multitude of concepts and built
-                    some challegning projects. But I wanted to learn more and explore the side of front-end web development. Thus, I began this journey of 
-                    becoming a front-end developer. I aim to learn skills and apply my knowledge to create beautiful designs and applications.
-                </p>
-            </div> 
+        <section id="about">
+            <div id="about-container">
+                <div class="about-pics">
+                    <img src="img/avatar.png" id="pic-1" alt="" class="frame">
+                    <img src="img/avatar (1).png" id="pic-2" alt="" class="frame">
+                </div>
+                <div id="about-description" class="frame">
+                    <div class="frame-top"></div>
+                    <h2>Hey there!</h2>
+                    <p>  I'm Megan - a curious and creative individual who's always looking for an adventure.
+                        My fascination for web design began in the early days of MySpace and Tumblr where everyone decorated their profiles in HTML and CSS.
+                        I was intrigued by the idea of some pages on the internet being a space for self-expression.
+                        <br><br>
+                        I've obtained a Bachelor's in Computer Science at San Diego State University. I've learned a multitude of concepts and built
+                        some challegning projects. But I wanted to learn more and explore the side of front-end web development. Thus, I began this journey of
+                        becoming a front-end developer. I aim to learn skills and apply my knowledge to create beautiful designs and applications.
+                    </p>
+                </div>
+            </div>
         </section> 
 
-        <section id="tech-stack" class="section-container">
-                <!-- top bar -->
-                <div class="header-bar">
-                    <h2>tech stack</h2>
-                    <div class="bar-right">
-                        <button class="collapse" onclick="collapseSection('tech-container')">_</button>
-                        <button>X</button>
-                    </div>
-            </div>
-            <!-- end top bar -->
-            <!-- section content -->
-            <div id="tech-container" class="content-container">
-                <div id="tech-stack-grid">
+
+        <section id="tech-stack">
+            <div id="tech-container" class="frame">
+                <div class="frame-top"></div>
+                <h2>Tech Stack</h2>
+                <div id="tech-grid">
                     <div class="tech-item" onclick="selectItem(this)">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
                         <p>HTML</p>
@@ -87,6 +104,14 @@
                     <div class="tech-item" onclick="selectItem(this)">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                         <p>React.JS</p>
+                    </div>
+                    <div class="tech-item">  
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" />
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="tech-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+                        <p>Tailwind</p>
                     </div>
             
                     <div class="tech-item" onclick="selectItem(this)">
@@ -134,115 +159,89 @@
             </div>
         </section>
 
-        <section id="projects" class="section-container">
-            <!-- top bar -->
-            <div class="header-bar">
-                <h2>projects</h2>
-                <div class="bar-right">
-                    <button class="collapse" onclick="collapseSection('projects-container')">_</button>
-                    <button>X</button>
-                </div>
-            </div> 
-            <!-- end top bar -->
-            <!-- section content -->
-            <div id="projects-container" class="content-container">
-                <div class="projects-grid">
+        <section id="projects">
+            <!-- box -->
+            <div id="projects-container" class="frame">
+                <div class="frame-top frame-stick"></div>
 
-                    <div class="project-item">
-                        <h3>Pokedex Collab</h3>
-                        <img src="img/project-thumbnail/pokedex.png" alt="">
-                        <div class="project-buttons">
-                        <button class="src-btn"><a href="https://github.com/mrespicio/pokedex">Source Code</a></button></div>
+                <!-- grid -->
+                <div id="projects-grid-container">
+                    <h2>Projects</h2>
+
+                    <div id="projects-item-grid">
+                        <!-- <div id="admin-dashboard" class="project-item">
+                            <img src="img/project-thumbnail/admin-dashboard.png" alt="">
+                            <h3>Admin Dashboard</h3>
+                        </div>
+                        <div id="tonic-sign-up-form" class="project-item">
+                            <img src="img/project-thumbnail/tonic-sign-up-form.png" alt="">
+                            <h3>Tonic Sign Up Form</h3>
+                        </div>
+                        <div id="pokedex" class="project-item">
+                            <img src="img/project-thumbnail/pokedex.png" alt="">
+                            <h3>Pokedex Collab</h3>
+                        </div>
+                        <div id="calculator" class="project-item">
+                            <img src="img/project-thumbnail/calculator.png " alt="">
+                            <h3>Calculator</h3>
+                        </div>
+                        <div id="etch-a-sketch" class="project-item">
+                            <img src="img/project-thumbnail/etch-a-sketch.png" alt="">
+                            <h3>Etch-A-Sketch</h3>
+                        </div>
+                        <div id="rock-paper-scissors" class="project-item">
+                            <img src="img/project-thumbnail/rps.png" alt="">
+                            <h3>Rock, Paper, Scissors</h3>
+                        </div> -->
+                        <!-- <div id="earth-ally" class="project-item">
+                            <img src="img/project-thumbnail/earth-ally.png" alt="">
+                            <h3>Earth Ally</h3>
+                        </div>
+                        <div id="odin-recipes" class="project-item">
+                            <img src="img/project-thumbnail/odin-recipes.png" alt="">
+                            <h3>Odin Recipes</h3>
+                        </div>  -->
+                    </div> <!-- end projects-grid -->
+
+                    <div id="projects-sidebar">
+                        <h3 id="sb-project-name">4 items</h3>
+                        <img id="sb-project-thumbnail" src="img/buttons/folder-opened.svg" alt="" width="100px">
+                        <p id="sb-date"></p>
+                        <p id="sb-tags"></p>
+                        <p id="sb-desc"></p>
+                        <a id="sb-code-link" target="_blank" href="https://github.com/mrespicio">
+                            <button id="code-btn">Source Code</button></a>
+                        <a id="sb-prev-link" target="_blank" href="">
+                            <button id="prev-btn">Preview</button></a>
                     </div>
 
-                    <div class="project-item">
-                        <h3>Calculator</h3>
-                        <img src="img/project-thumbnail/calculator.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/calculator">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/calculator/">Preview</a></button>
+                    <div id="projects-folders">
+                        <div id="featured-folder" class="folder-item folder-selected">
+                            <img src="img/buttons/folder-closed.svg" alt="">
+                            <p>Featured Projects</p>
+                        </div>
+                        <div id="recent-folder" class="folder-item">
+                            <img src="img/buttons/folder-closed.svg" alt="">
+                            <p>Recent Projects</p>
+                        </div>
+                        <div id="all-folder" class="folder-item">
+                            <img src="img/buttons/folder-closed.svg" alt="">
+                            <p>All Projects</p>
                         </div>
                     </div>
-
-                    <div class="project-item">
-                        <h3>Etch-A-Sketch</h3>
-                        <img src="img/project-thumbnail/etch-a-sketch.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/etch-a-sketch">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/etch-a-sketch/">Preview</a></button>
-                            </div>
-                    </div>
-                    <div class="project-item">
-                        <h3>Rock, Paper, Scissors</h3>
-                        <img src="img/project-thumbnail/rps.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/rock-paper-scissors">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/rock-paper-scissors/">Preview</a></button>   
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3>Earth Ally</h3>
-                        <img src="img/project-thumbnail/earth-ally.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/earth-ally">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://mrespicio.github.io/earth-ally/">Preview</a></button>
-                        </div>
-                    </div>
-
-                    <div class="project-item">
-                        <h3>Odin Recipes</h3>
-                        <img src="img/project-thumbnail/odin-recipes.png" alt="">
-                        <div class="project-buttons">
-                            <button class="src-btn"><a href="https://github.com/mrespicio/odin-recipes">Source Code</a></button>
-                            <button class="prev-btn"><a href="https://github.com/mrespicio/odin-recipes">Preview</a></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div> <!-- grid -->
+            </div> <!-- box -->
         </section>
 
-        <section id="contact" class="section-container">
-            <!-- top bar -->
-            <div class="header-bar">
-                <h2>contact</h2>
-                <div class="bar-right">
-                    <button class="collapse" onclick="collapseSection('contact-container')">_</button>
-                    <button>X</button>
-                </div>
-            </div>
-            <!-- end top bar -->
-            <!-- section content -->
-            <div id="contact-container" class="content-container">
+        <section id="contact">
 
-                <a href="mailto: megantr.dev@gmail.com"><img src="img/icons/email.svg" alt=""></a>
-                <a href="https://github.com/mrespicio"><img src="img/icons/github.svg" alt=""></a>
-                <a href="https://www.linkedin.com/in/mtrespicio/"><img src="img/icons/linkedin.svg" alt=""></a>
-                
-            </div>
         </section>
 
-        <nav>
-            <ul id="navbar">
-                <li><button><a href="#hero">home</a></button></li>
-                <li><button><a href="#about">about</a></button></li>
-                <li><button><a href="#tech-stack">tech stack</a></button></li>
-                <li><button><a href="#projects">projects</a></button></li>
-                <li><button><a href="#contact">contact</a></button></li>
-            </ul>
-        </nav>
+        
     </main> 
 </body>
-    <script>
-        function collapseSection(elem){
-            let temp = document.getElementById(elem);
-            if(temp.classList.contains('collapsed')) temp.classList.remove('collapsed');
-            else temp.classList.add('collapsed');
-        }
 
-        function selectItem(item){
-            if(item.classList.contains('selected')) item.classList.remove('selected');
-            else item.classList.add('selected');
-        }
+    <script>
+        
     </script>
 </html>
