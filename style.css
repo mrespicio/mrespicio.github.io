@@ -17,9 +17,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    min-width: 320px;
-
     margin: 0 auto;
     padding: 0;
 }
@@ -27,6 +24,7 @@ body{
 main{
     margin: 0;
     width: max(800px, 100%);
+    border: solid 1px red;
 }
 
 /* content frames */
@@ -52,6 +50,14 @@ main{
     left: -2rem;
     border-top: solid 4px var(--dark-pink);
 }
+
+/* ::-webkit-scrollbar-track{
+    background: var(--light-pink);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--dark-purple);
+} */
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
@@ -200,6 +206,7 @@ nav{
     gap: 20px;
     justify-items: center;
     margin: 44px auto;
+    border: solid 1px red;
 }
 
     #about-description{
@@ -267,9 +274,9 @@ nav{
 #projects-container{
     width: max(425px, 60%);
     margin: 44px auto;
-    /* height: 100%; */
-    max-height: 800px;
-    overflow: scroll;
+    height: 100%;
+    /* max-height: 800px;
+    overflow: scroll; */
 }
 
     .frame-stick{
@@ -287,6 +294,7 @@ nav{
         grid-template-columns: 3fr 1fr;
         grid-template-rows: auto 3fr auto;
         gap: 12px;
+        border: solid 1px red;
     }
 
     #projects-grid-container h2{
@@ -327,6 +335,7 @@ nav{
         justify-items: center;
         overflow-y: auto;
         overflow-x: hidden;
+        max-height: 640px;
     }
 
         .project-item{
@@ -403,12 +412,3 @@ nav{
     width: 40px;
 }
 
-/* mobile */
-@media(max-width: 480px){
-    /* make nav a hamburger menu */
-
-    #hero{
-        background-color: #B892FF;
-    }
-
-}
