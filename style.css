@@ -324,7 +324,7 @@ nav{
 
     /* big grid of project items display */
     #projects-item-grid{
-        /* border: solid 2px green; */
+        border: solid 2px green;
         /* height: min(auto, 400px); */
         margin: 0 auto;
         display: grid; 
