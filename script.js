@@ -41,6 +41,12 @@ const earthAlly = new Project('earth-ally', 'Earth Ally', 'img/project-thumbnail
 const odinRecipes = new Project('odin-recipes', 'Odin Recipes', 'img/project-thumbnail/odin-recipes.png', 'Nov 2022', 'html, css', 
     'Simple HTML project showcasing three different food recipes',
     'https://github.com/mrespicio/odin-recipes', 'https://mrespicio.github.io/odin-recipes/')
+const library = new Project('library', 'Library', 'img/project-thumbnail/library.png', 'Sep 2023', 'html, bootstrap css, js',
+    'Library that lets user keep track of their books read',
+    'https://github.com/mrespicio/library', 'https://mrespicio.github.io/library/')
+const ticTacToe = new Project('tic-tac-toe', 'Tic-Tac-Toe', 'img/project-thumbnail/tic-tac-toe.png', 'Oct 2023', 'html, css, js',
+    'Tic-Tac-Toe web application', 
+    'https://github.com/mrespicio/tic-tac-toe', 'https://mrespicio.github.io/tic-tac-toe/')
 
 
 // contains all projects
