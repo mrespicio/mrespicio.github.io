@@ -291,7 +291,7 @@ nav{
     #projects-grid-container{
         width: 100%;
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-templat  e-columns: 3fr 1fr;
         grid-template-rows: auto 3fr auto;
         gap: 12px;
         border: solid 1px red;
@@ -339,7 +339,7 @@ nav{
     }
 
         .project-item{
-            min-width: 320px;
+            width: 320px;
             align-items: center;
             text-align: center;
             /* border: solid 1px blue; */
