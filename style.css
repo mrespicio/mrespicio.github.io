@@ -296,8 +296,6 @@ nav{
 #projects-container{
     height: 100%;
     max-width: 100%;
-    /* max-height: 800px;
-    overflow: scroll; */
 }
 
 
@@ -306,13 +304,20 @@ nav{
         border: solid 1px red;
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-between;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
     }
     
     .project-item{
         border: solid 1px greenyellow;
         width: 300px;
+        padding: 20px;
+    }
+
+    .project-item:hover{
+        background-color: var(--dusty-pink);
+        border-radius: 8px;;
     }
 
     .project-item > img{
