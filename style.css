@@ -123,7 +123,11 @@ nav{
 
     /* welcome header */
     #header{
-
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        height: auto;
+        width: min(50%, 500px);
+        align-self: center;
     }
 
         #header hr{
