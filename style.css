@@ -8,6 +8,8 @@
     --dark-purple: #6E44FF;
     --darkest-purple: #3F298E;
     --yellow: #FFF3B4;
+    --dark-blue: #2B4367;
+    --dusty-pink: #E7B7B9;
     scroll-behavior: smooth;
 }
 
@@ -65,7 +67,7 @@ main{
 nav{
     display: flex;
     justify-content: space-between;
-    background-color: var(--dark-pink);
+    background-color: var(--dusty-pink);
     padding: 12px 36px;
     position: fixed;
     z-index: 5;
@@ -83,8 +85,8 @@ nav{
     }
 
     nav ul li button{
-        background-color: #FFC2E2;
-        border: solid 2px var(--dark-purple);
+        background-color: white;
+        border: solid 2px var(--dark-blue);
         border-radius: .6em;
         padding: .5em 1em;
     }
@@ -100,7 +102,7 @@ nav{
 /* hero section */
 /* background */
 #hero{
-    background-color: var(--light-pink);
+    background-color: var(--dark-blue);
     height: 100vh;
     width: 100%;
     margin-top: 0;
@@ -109,40 +111,25 @@ nav{
 
     /* grid */
     #hero-container{
+        border: solid 2px green;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: repeat(2, 1fr);
         grid-template-rows: .5fr 1fr .8fr;
         width: max(425px, 80%);
         gap: 40px;
-        justify-items: center;
+        justify-items: center; */
         margin: 0 auto;
     }
 
     /* welcome header */
     #header{
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        height: auto;
-        width: min(50%, 500px);
-        align-self: center;
+
     }
 
         #header hr{
             border-top: solid 2px var(--light-pink);
             width: 90%;
             margin: 0 auto;
-        }
-
-    /* box for header photo*/
-    #hero-photo{ 
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-        width: min(auto, 400px);
-    }
-
-        /* header photo*/
-        #hero-photo > img{
-            width: 300px;
         }
 
     /* cta buttons */
@@ -225,7 +212,7 @@ nav{
 
 /*tech stack section */
 #tech-stack{
-    background-color: var(--light-pink);
+    background-color: var(--dark-blue);
     padding: 44px 0;
 }
 
