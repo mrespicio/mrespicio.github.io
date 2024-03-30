@@ -26,6 +26,11 @@ body{
 main{
     margin: 0;
     width: max(800px, 100%);
+
+}
+
+main > *{
+    padding: 50px min(20%, 400px);
 }
 
 /* content frames */
@@ -39,6 +44,7 @@ main{
     padding: 2rem;
     box-sizing: border-box;
 } 
+
 
 /* .frame-top{
     border-radius: 12px 12px 0 0;
@@ -119,12 +125,11 @@ nav{
         /* gap: 40px;
         justify-items: center;  */
         /* /* margin: 0 auto; */
-        padding-left: max(10px, 15%);
+        /* padding-left: max(10px, 15%); */
     }
 
     #hero-container > *{
-        /* border: solid 1px lightcoral; */
-        margin: 20px 0;
+        border: solid 1px lightcoral;
     }
 
     /* welcome header */
@@ -202,7 +207,7 @@ nav{
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* grid */
-#about-container{
+/* #about-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: max(425px, 60%);
@@ -222,8 +227,22 @@ nav{
 
     .about-pics img{
         width: 200px;
+    } */
+
+#about-container{
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    height: auto;
+}
+
+    #about-description{
+
     }
 
+    .about-pics img{
+        max-height: 200px;
+    }
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /*tech stack section */
