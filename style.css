@@ -44,27 +44,6 @@ main > *{
     box-sizing: border-box;
 } 
 
-
-/* .frame-top{
-    border-radius: 12px 12px 0 0;
-    z-index: 1;
-    height: 16px;
-    width: calc(100% + 4rem);
-    background-color: var(--light-purple);
-    position: relative;
-    top:  calc(-4px + -2rem);
-    left: -2rem;
-    border-top: solid 4px var(--dark-pink);
-} */
-
-/* ::-webkit-scrollbar-track{
-    background: var(--light-pink);
-}
-
-::-webkit-scrollbar-thumb{
-    background: var(--dark-purple);
-} */
-
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* navigation */
