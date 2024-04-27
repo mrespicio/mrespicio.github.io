@@ -10,12 +10,14 @@
     --yellow: #FFF3B4;
     --dark-blue: #122746;
     --dusty-pink: #E7B7B9;
+    --dark-gray: #191B1F;
+    --accent-red: #CD2E33;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
 
 body{
-    background-color: var(--pink);
+    background-color: var(--dark-gray);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,6 +30,9 @@ main{
     width: 100%;
 }
 
+p, h2, h3{
+    color: white;
+}
 main > *{
 
 }
@@ -35,7 +40,7 @@ main > *{
 
 /* content frames */
 /* applied to elements with a frame */
-.frame{
+/* .frame{
     border: solid 4px var(--dusty-pink);
     border-radius: 12px;
     background-color: white;
@@ -43,7 +48,7 @@ main > *{
     box-shadow: 8px 8px 0 0 var(--dusty-pink);
     padding: 2rem;
     box-sizing: border-box;
-} 
+}  */
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
@@ -92,7 +97,6 @@ nav{
 /* hero section */
 /* background */
 #hero{
-    background-color: var(--dark-blue);
     height: 100vh;
     margin-top: 0;
     align-content: center;
@@ -120,6 +124,7 @@ nav{
 
     #header h1{
         font-size: 6rem;
+        color: var(--dusty-pink);
     }
     #header p{
         max-width: 60%;
@@ -226,7 +231,6 @@ nav{
 
 /*tech stack section */
 #tech-stack{
-    background-color: var(--dark-blue);
     padding: 40px 0;
 }
 
@@ -248,7 +252,7 @@ nav{
     }
 
         .tech-item{
-            background-color: white;
+            /* background-color: white; */
             width: 4.5em;
             /* width: 3.5em; */
             height: auto;
