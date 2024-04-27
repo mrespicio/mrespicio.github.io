@@ -219,7 +219,33 @@ nav{
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* grid with items */
+#tech-stack-container{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
 
+    .tech-item{
+        display: inline-block;
+        padding: 0.5em 1em;
+        /* white-space: nowrap; */
+        /* overflow: hidden; */
+    }
+
+    .tech-item > img{
+        width: 20px;
+        display: inline-block;
+    }
+
+    .tech-item > p{
+        display: inline-block;
+    }
+
+    .tech-item:hover{
+        background-color: wheat;
+    }
+
+    
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
