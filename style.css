@@ -2,9 +2,9 @@
     font-family: 'space mono', 'open sans', 'arial';
     margin: 0;
     padding: 0;
-    --yellow: #FFF3B4;
+    --light-yellow: #FFF3B4;
     --dusty-pink: #E7B7B9;
-    --dark-gray: #191B1F;
+    --dark-gray: #282223;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
@@ -31,7 +31,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--dusty-pink);
+    /* background-color: var(--dusty-pink); */
     /* padding: 12px 36px; */
     /* position: fixed; */
     width: 100%;
@@ -39,7 +39,7 @@ nav{
     z-index: 5;
     box-sizing: border-box;
     padding: 0 20px;
-    color: black;
+    color: white;
 }
 
     nav ul{
@@ -59,15 +59,24 @@ nav{
         background: none;
         border: none;
         padding: .5em 1em;
+        border: solid 2px var(--dark-gray);
     }
 
     nav a{
         text-decoration: none;
-        color: black;
+        color: white;
     }
 
-    nav ul li button:hover{
+    nav ul li button .nav-proj, nav a .nav-proj{
+        padding: .5em 1em;
+        border: solid 2px var(--dusty-pink);
+        color: var(--dusty-pink);
+    }
 
+
+    nav ul li button:hover{
+        border: solid 2px var(--dusty-pink);
+        padding: .5em 1em;
     }
 
 
@@ -169,11 +178,9 @@ nav{
     width: 960px;
     margin: 40px auto;
 }
-
     #about-description{
         grid-column: 1/2;
     }
-
 
     #tech-container{
         grid-column: 2/3;
@@ -215,9 +222,9 @@ nav{
     }
 
     .tech-item:hover{
-        background-color: wheat;
+        background-color: var(--dusty-pink);
+        color: black;
     }
-
 
 
 /* ------------------------------------------------------------------------------------------------------------- */
@@ -255,6 +262,7 @@ nav{
     .project-item:hover{
         background-color: var(--dusty-pink);
         border-radius: 8px;
+        color: black;
     }
 
     .project-item > img{
@@ -273,7 +281,7 @@ nav{
     }
 
     .project-item > .item-content > a > button:hover{
-        background-color: var(--dusty-pink);
+        background-color: var(--light-yellow);
         color: black
     }
     
