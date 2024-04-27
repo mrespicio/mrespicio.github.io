@@ -203,8 +203,9 @@ nav{
 
 
     #tech-container{
-        /* grid-column: 2/3; */
         grid-column: 2/3;
+        /* grid-column: 1/3;
+        grid-row: 2/3; */
     }
 
     /* #about-container img{
@@ -218,33 +219,7 @@ nav{
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* grid with items */
-#tech-grid{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    height: auto;
-    margin: 0 auto;
-}
 
-    .tech-item{
-        /* background-color: white; */
-        width: 4.5em;
-        /* width: 3.5em; */
-        height: auto;
-        padding: 1.5rem;
-        text-overflow: ellipsis;
-    }
-
-        .tech-item>p{
-            text-align: center;
-            width: auto;
-            margin: 0 -1.5rem;
-        }
-
-        .tech-item:hover{
-            background-color: var(--dusty-pink);
-            border-radius: 8px;;
-        }
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
@@ -292,10 +267,16 @@ nav{
         grid-column: 2 / 3;
     }
 
-    .project-item > .item-content > a{
-
+    .project-item > .item-content > a > button{
+        padding: 1em 1.5em;
+        background-color: white;
+        border: none;
     }
 
+    .project-item > .item-content > a > button:hover{
+        background-color: var(--dusty-pink);
+        color: black
+    }
     
 
 /* contact section */
