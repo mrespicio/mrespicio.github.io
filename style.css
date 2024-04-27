@@ -2,16 +2,9 @@
     font-family: 'space mono', 'open sans', 'arial';
     margin: 0;
     padding: 0;
-    --dark-pink: #FF90B3;
-    --light-pink: #FFC2E2;
-    --light-purple: #B892FF;
-    --dark-purple: #6E44FF;
-    --darkest-purple: #3F298E;
     --yellow: #FFF3B4;
-    --dark-blue: #122746;
     --dusty-pink: #E7B7B9;
     --dark-gray: #191B1F;
-    --accent-red: #CD2E33;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
@@ -28,23 +21,8 @@ body{
 
 main{
     width: 100%;
-}
-
-p, h2, h3{
     color: white;
 }
-
-/* content frames */
-/* applied to elements with a frame */
-/* .frame{
-    border: solid 4px var(--dusty-pink);
-    border-radius: 12px;
-    background-color: white;
-    z-index: 4;
-    box-shadow: 8px 8px 0 0 var(--dusty-pink);
-    padding: 2rem;
-    box-sizing: border-box;
-}  */
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
@@ -61,6 +39,7 @@ nav{
     z-index: 5;
     box-sizing: border-box;
     padding: 0 20px;
+    color: black;
 }
 
     nav ul{
@@ -105,7 +84,7 @@ nav{
     /* grid */
     #hero-container{
         /* border: solid 1px red; */
-        width: 960px;
+        width: max(50%, 1020px);
         margin: 0 auto;
     }
 
@@ -116,9 +95,8 @@ nav{
     /* welcome header */
     #header{
         height: auto;
-        width: min(50%, 900px);
+        width: 100%;
         align-self: center;
-        color: white;
         /* border: solid 1px lightblue; */
     }
 
@@ -126,28 +104,23 @@ nav{
         font-size: 6rem;
         color: var(--dusty-pink);
     }
+
     #header p{
-        max-width: 60%;
+        max-width: 50%;
     }
 
     /* cta buttons */
     #cta-container{
-        /* grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        align-self: start; */
         width: min(50%, 400px);
         height: auto;
-/*      border: solid 1px cyan; */
     }
 
         #cta-container button{
-            /* width: 12em; */
-            width: 44%;
+            width: 12em;
             height: 4em;
-            border-radius: 12px;
-            box-shadow: 6px 6px 0 0 var(--dusty-pink);
+            /* border-radius: 12px; */
+            /* box-shadow: 6px 6px 0 0 var(--dusty-pink); */
             font-size: 1em;
-            margin: 0 auto;
         }
 
         #cta-container button:hover{
@@ -245,7 +218,7 @@ nav{
         background-color: wheat;
     }
 
-    
+
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
