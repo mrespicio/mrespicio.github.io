@@ -33,10 +33,6 @@ main{
 p, h2, h3{
     color: white;
 }
-main > *{
-
-}
-
 
 /* content frames */
 /* applied to elements with a frame */
@@ -89,6 +85,10 @@ nav{
     nav a{
         text-decoration: none;
         color: black;
+    }
+
+    nav ul li button:hover{
+
     }
 
 
@@ -166,7 +166,7 @@ nav{
         }
 
     /* find me */
-    #connect{
+    /* #connect{
         grid-column: 2 / 3;
         grid-row: 3 / 4;
         height: 100px;
@@ -182,113 +182,86 @@ nav{
 
         #connect > a > img{
             width: 50px;
-        }
+        } */
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* grid */
-/* #about-container{
+#about-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: max(425px, 60%);
-    gap: 20px;
-    justify-items: center;
-    margin: 44px auto;
-    border: solid 1px red;
-}
-
-    #about-description{
-        grid-column: 2 / 3;
-    }
-
-    .about-pics{
-        grid-column: 1 / 2;
-    }
-
-    .about-pics img{
-        width: 200px;
-    } */
-
-#about-container{
-    display: flex;
     gap: 40px;
-    justify-content: space-between;
-    align-items: center;
+    align-items: start;
     height: auto;
     width: 960px;
     margin: 40px auto;
 }
 
     #about-description{
-
+        grid-column: 1/2;
     }
 
-    #about-container img{
+
+    #tech-container{
+        /* grid-column: 2/3; */
+        grid-column: 2/3;
+    }
+
+    /* #about-container img{
         max-width: 400px;
         max-height: 400px;
-    }
+        grid-column: 1/2;
+        grid-row: 1/3
+    } */
+
+
 /* ------------------------------------------------------------------------------------------------------------- */
 
-/*tech stack section */
-#tech-stack{
-    padding: 40px 0;
+/* grid with items */
+#tech-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: auto;
+    margin: 0 auto;
 }
 
-    /* contents inside box */
-    #tech-container{
-        /* width: max(425px, 60%); */
-        /* margin: 24px auto; */
-        width: 960px;
-        margin: 40px auto;
-    }
-
-    /* grid with items */
-    #tech-grid{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
+    .tech-item{
+        /* background-color: white; */
+        width: 4.5em;
+        /* width: 3.5em; */
         height: auto;
-        margin: 0 auto;
+        padding: 1.5rem;
+        text-overflow: ellipsis;
     }
 
-        .tech-item{
-            /* background-color: white; */
-            width: 4.5em;
-            /* width: 3.5em; */
-            height: auto;
-            padding: 1.5rem;
-            text-overflow: ellipsis;
+        .tech-item>p{
+            text-align: center;
+            width: auto;
+            margin: 0 -1.5rem;
         }
 
-            .tech-item>p{
-                text-align: center;
-                width: auto;
-                margin: 0 -1.5rem;
-            }
-
-            .tech-item:hover{
-                background-color: var(--dusty-pink);
-                border-radius: 8px;;
-            }
+        .tech-item:hover{
+            background-color: var(--dusty-pink);
+            border-radius: 8px;;
+        }
 
 /* ------------------------------------------------------------------------------------------------------------- */
 
 /* projects section */
 #projects{
-    height: min(auto, 800px);
+    /* height: min(auto, 800px); */
 }
 
-/* contents inside box */
+/* contents inside section */
 #projects-container{
     height: 100%;
     width: 960px;
     margin: 40px auto;
 }
 
-
-    /* grid responsive grid containing all project items */
-    #projects-item-grid{
-        /* border: solid 1px red; */
+    /* list containing all project items */
+    #projects-item-list{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -310,7 +283,6 @@ nav{
         border-radius: 8px;
     }
 
-
     .project-item > img{
         max-width: 100%;
         grid-column: 1 / 2;
@@ -319,6 +291,11 @@ nav{
     .project-item > .item-content{
         grid-column: 2 / 3;
     }
+
+    .project-item > .item-content > a{
+
+    }
+
     
 
 /* contact section */
