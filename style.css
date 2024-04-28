@@ -52,14 +52,9 @@ nav{
     }
 
     nav ul li button{
-        /* background-color: white;
-        border: solid 2px var(--dark-blue);
-        border-radius: .6em;
-        padding: .5em 1em; */
         background: none;
-        border: none;
         padding: .5em 1em;
-        border: solid 2px var(--dark-gray);
+        border: solid 2px transparent;
     }
 
     nav a{
@@ -67,12 +62,11 @@ nav{
         color: white;
     }
 
-    nav ul li button .nav-proj, nav a .nav-proj{
-        padding: .5em 1em;
-        border: solid 2px var(--dusty-pink);
+    nav ul li button .nav-proj{
         color: var(--dusty-pink);
+        border: solid 2px var(--dusty-pink);
+        padding: .5em 1em;
     }
-
 
     nav ul li button:hover{
         border: solid 2px var(--dusty-pink);
@@ -284,6 +278,11 @@ nav{
         background-color: var(--light-yellow);
     }
     
+
+    #projects-item-list a{
+        text-decoration: none;
+        color: white;
+    }
 
 /* contact section */
 #contact{
