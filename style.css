@@ -282,7 +282,6 @@ nav{
 
     .project-item > .item-content > a > button:hover{
         background-color: var(--light-yellow);
-        color: black
     }
     
 
