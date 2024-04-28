@@ -18,10 +18,10 @@
         <nav>
             <h1>Megan Respicio</h1>
             <ul>
-                <li><button><a href="#hero">home</a></button></li>
+                <!-- <li><button><a href="#hero">home</a></button></li> -->
                 <li><button><a href="#about">about</a></button></li>
-                <li><button><a href="#tech-stack">tech stack</a></button></li>
-                <li><button><a href="#projects">projects</a></button></li>
+                <!-- <li><button><a href="#tech-stack">tech stack</a></button></li> -->
+                <li><button><a href="#projects" class="nav-proj">projects</a></button></li>
                 <li><button><a href="#contact">contact</a></button></li>
             </ul>
         </nav>
@@ -30,23 +30,17 @@
         <!-- hero -->
         <section id="hero">
             <div id="hero-container">
-                <div id="header" class="frame">
-                    <div class="frame-top"></div>
+                <div id="header">
                     <h3>Hi I'm</h3>
                     <h1>Megan Respicio</h1>
-                    <hr>
-                    <h2>Front End Web Developer</h2>
+                    <h2>Front-End Web Developer</h2>
+                    <p>Creating pretty pages for the web with a pleasing and seamless user experience.</p>
                 </div>
-                <div id="hero-photo" class="frame">
-                    <div class="frame-top"></div>
-                    <img src="img/avatar.png" alt="profile pic, currently a photo of snorlax">
-                </div>
-                <div id="cta-grid">
-                    <a href="mailto: mrespicio.dev@gmail.com"><button id="hire-btn" type="button">Hire Me</button></a>
+                <div id="cta-container">
+                    <a href="mailto: mtrespicio97@gmail.com"><button id="hire-btn" type="button">Hire Me</button></a>
                     <a href="#projects"><button id="view-btn" type="button">View Projects</button></a>
                 </div>
-                <div id="connect" class="frame">
-                    <div class="frame-top"></div>
+                <div id="connect">
                     <h4>Find Me</h4>
                     <a href="mailto: mrespicio.dev@gmail.com"><img src="img/icons/email.svg" alt=""></a>
                     <a href="https://github.com/mrespicio"><img src="img/icons/github.svg" alt=""></a>
@@ -59,127 +53,163 @@
 
         <section id="about">
             <div id="about-container">
-                <div class="about-pics">
-                    <img src="img/avatar.png" id="pic-1" alt="" class="frame">
-                    <!-- <img src="img/avatar (1).png" id="pic-2" alt="" class="frame"> -->
+                    <!-- <img src="img/avatar.png" id="pic-1" alt="" class=""> -->
+                    <div id="about-description">
+                        <h2>Hey there!</h2>
+                        <p>  I'm Megan - a curious and creative individual who's always looking for an adventure.
+                            My fascination for web design began in the early days of MySpace and Tumblr where everyone decorated their profiles in HTML and CSS.
+                            I was intrigued by the idea of pages on the internet being a space for self-expression.
+                            <br><br>
+                            I've obtained a Bachelor's in Computer Science at San Diego State University. I've learned a multitude of concepts and built
+                            challegning projects. I wanted to learn more and explore the creative side of front-end web development. Thus, I began this journey of
+                            becoming a front-end developer. I strive to learn skills and apply my knowledge to create beautiful and fun designs and applications.
+                        </p>
                 </div>
-                <div id="about-description" class="frame">
-                    <div class="frame-top"></div>
-                    <h2>Hey there!</h2>
-                    <p>  I'm Megan - a curious and creative individual who's always looking for an adventure.
-                        My fascination for web design began in the early days of MySpace and Tumblr where everyone decorated their profiles in HTML and CSS.
-                        I was intrigued by the idea of some pages on the internet being a space for self-expression.
-                        <br><br>
-                        I've obtained a Bachelor's in Computer Science at San Diego State University. I've learned a multitude of concepts and built
-                        some challegning projects. But I wanted to learn more and explore the side of front-end web development. Thus, I began this journey of
-                        becoming a front-end developer. I aim to learn skills and apply my knowledge to create beautiful designs and applications.
-                    </p>
-                </div>
+
+                <div id="tech-container">
+                    <h2>Tech Stack</h2>
+                    <div id="tech-stack-container">
+
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                            <p>HTML</p>
+                        </div>
+
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                            <p>CSS</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                            <p>Node.JS</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                            <p>React.JS</p>
+                        </div>
+                        <div class="tech-item">  
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" />
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                            <p>Tailwind</p>
+                        </div>
+                
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                            <p>Java</p>
+                        </div>
+    
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+                            <p>Python</p>
+                        </div>             
+                    
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+                            <p>Figma</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
+                            <p>Adobe Photoshop</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" />
+                            <p>Adobe XD</p>
+                        </div>
+    
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                            <p>Git</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+                            <p>Github</p>
+                        </div>
+                        <div class="tech-item">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                            <p>VS Code</p>
+                        </div>
+    
+                        <div class="tech-item" onclick="selectItem(this)">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
+                            <p>WordPress</p>
+                        </div>
+    
+                    </div>
+                </div>    
             </div>
         </section> 
 
-
-        <section id="tech-stack">
-            <div id="tech-container" class="frame">
-                <div class="frame-top"></div>
-                <h2>Tech Stack</h2>
-                <div id="tech-grid">
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                        <p>HTML</p>
-                    </div>
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                        <p>CSS</p>
-                    </div>
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
-                        <p>JavaScript</p>
-                    </div>
-
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                        <p>Node.JS</p>
-                    </div>
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                        <p>React.JS</p>
-                    </div>
-                    <div class="tech-item">  
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" />
-                        <p>Bootstrap</p>
-                    </div>
-                    <div class="tech-item">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
-                        <p>Tailwind</p>
-                    </div>
-            
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-                        <p>Java</p>
-                    </div>
-
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                        <p>Python</p>
-                    </div>             
-                
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-                        <p>Figma</p>
-                    </div>
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" />
-                        <p>Adobe Photoshop</p>
-                    </div>
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" />
-                        <p>Adobe XD</p>
-                    </div>
-
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-                        <p>Git</p>
-                    </div>
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-                        <p>Github</p>
-                    </div>
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                        <p>VS Code</p>
-                    </div>
-
-                    <div class="tech-item" onclick="selectItem(this)">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
-                        <p>WordPress</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+        <!-- <section id="tech-stack"></section> -->
 
         <section id="projects">
             <!-- box -->
-            <div id="projects-container" class="frame">
-                <div class="frame-top frame-stick"></div>
+            <div id="projects-container">
+                <h2>Projects</h2>
 
                 <!-- grid -->
-                <div id="projects-grid-container">
-                    <h2>Projects</h2>
+                    <div id="projects-item-list">
 
-                    <div id="projects-item-grid">
-                        <!-- <div id="admin-dashboard" class="project-item">
-                            <img src="img/project-thumbnail/admin-dashboard.png" alt="">
-                            <h3>Admin Dashboard</h3>
+                        <div id="library" class="project-item">
+                            <img src="img/project-thumbnail/library.png" alt="">
+                            <div class="item-content">
+                                <h3>Library</h3>
+                                <p>A library application. User can seamlessly track books they've read or plan to read.</p>
+                                <p>Built with: HTML, CSS, JS, Bootstrap</p>
+                                <a href="https://github.com/mrespicio/library"><button>Repo</button></a>
+                                <!-- <a href="https://github.com/mrespicio/library"><img src="img/icons/github.svg" alt=""></a> -->
+                                <a href="https://mrespicio.github.io/library"><button>Preview</button></a>
+                            </div>
+                        </div>
+                        <div id="tic-tac-toe" class="project-item">
+                            <img src="img/project-thumbnail/tic-tac-toe.png" alt="">
+                            <div class="item-content">
+                                <h3>Tic-Tac-Toe</h3>
+                                <p>A simple tic-tac-toe game in which 2 users can play together.</p>
+                                <p>Built with: HTML, CSS, JS</p>
+                                <a href="https://github.com/mrespicio/tic-tac-toe"><button>Repo</button></a>
+                                <a href="https://mrespicio.github.io/tic-tac-toe"><button>Preview</button></a>
+                            </div>
                         </div>
                         <div id="tonic-sign-up-form" class="project-item">
                             <img src="img/project-thumbnail/tonic-sign-up-form.png" alt="">
-                            <h3>Tonic Sign Up Form</h3>
+                            <div class="item-content">
+                                <h3>Tonic Sign Up Form</h3>
+                                <p>Sign up form for a mock cosmetic brand utilizing form validation.</p>
+                                <p>Built with: HTML, CSS, JS</p>
+                                <a href="https://github.com/mrespicio/tonic-sign-up-form"><button>Repo</button></a>
+                                <a href="https://mrespicio.github.io/tonic-sign-up-form/"><button>Preview</button></a>
+                            </div>
                         </div>
+
                         <div id="pokedex" class="project-item">
                             <img src="img/project-thumbnail/pokedex.png" alt="">
-                            <h3>Pokedex Collab</h3>
+                            <div class="item-content">
+                                <h3>Pokedex Collab</h3>
+                                <p>Collaboration with a colleague to create a pokedex that condenses key information using PokeAPI.</p>
+                                <a href="https://github.com/mrespicio/pokedex"><button>Repo</button></a>
+                                <a href="https://mrespicio.github.io/pokedex/"><button>Preview</button></a>
+                            </div>
+                        </div>
+
+
+
+                        <a href="projects.html">All projects</a>
+                        <!-- 
+                        <div id="admin-dashboard" class="project-item">
+                            <img src="img/project-thumbnail/admin-dashboard.png" alt="">
+                            <div class="item-content">
+                                <h3>Admin Dashboard</h3>
+                                <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                <a href="https://github.com/mrespicio/admin-dashboard"><button>Repo</button></a>
+                                <a href="https://mrespicio.github.io/admin-dashboard/"><button>Preview</button></a>
+                            </div>
                         </div>
                         <div id="calculator" class="project-item">
                             <img src="img/project-thumbnail/calculator.png " alt="">
@@ -192,8 +222,8 @@
                         <div id="rock-paper-scissors" class="project-item">
                             <img src="img/project-thumbnail/rps.png" alt="">
                             <h3>Rock, Paper, Scissors</h3>
-                        </div> -->
-                        <!-- <div id="earth-ally" class="project-item">
+                        </div>
+                         <div id="earth-ally" class="project-item">
                             <img src="img/project-thumbnail/earth-ally.png" alt="">
                             <h3>Earth Ally</h3>
                         </div>
@@ -203,33 +233,6 @@
                         </div>  -->
                     </div> <!-- end projects-grid -->
 
-                    <div id="projects-sidebar">
-                        <h3 id="sb-project-name">4 items</h3>
-                        <img id="sb-project-thumbnail" src="img/buttons/folder-opened.svg" alt="" width="100px">
-                        <p id="sb-date"></p>
-                        <p id="sb-tags"></p>
-                        <p id="sb-desc"></p>
-                        <a id="sb-code-link" target="_blank" href="https://github.com/mrespicio">
-                            <button id="code-btn">Source Code</button></a>
-                        <a id="sb-prev-link" target="_blank" href="">
-                            <button id="prev-btn">Preview</button></a>
-                    </div>
-
-                    <div id="projects-folders">
-                        <div id="featured-folder" class="folder-item folder-selected">
-                            <img src="img/buttons/folder-closed.svg" alt="">
-                            <p>Featured Projects</p>
-                        </div>
-                        <div id="recent-folder" class="folder-item">
-                            <img src="img/buttons/folder-closed.svg" alt="">
-                            <p>Recent Projects</p>
-                        </div>
-                        <div id="all-folder" class="folder-item">
-                            <img src="img/buttons/folder-closed.svg" alt="">
-                            <p>All Projects</p>
-                        </div>
-                    </div>
-                </div> <!-- grid -->
             </div> <!-- box -->
         </section>
 
