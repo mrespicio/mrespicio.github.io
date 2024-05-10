@@ -106,6 +106,9 @@ nav{
         font-size: 6rem;
         color: var(--dusty-pink);
     }
+    u{
+        color: var(--light-yellow);
+    }
 
     #header p{
         max-width: 50%;
